@@ -8,20 +8,101 @@
 
 /* Begin PBXBuildFile section */
 		9612CFBF1C195D600045EFCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFBE1C195D600045EFCC /* AppDelegate.swift */; };
-		9612CFC11C195D600045EFCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFC01C195D600045EFCC /* ViewController.swift */; };
-		9612CFC41C195D600045EFCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9612CFC21C195D600045EFCC /* Main.storyboard */; };
 		9612CFC61C195D600045EFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9612CFC51C195D600045EFCC /* Assets.xcassets */; };
 		9612CFC91C195D600045EFCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9612CFC71C195D600045EFCC /* LaunchScreen.storyboard */; };
+		9612CFD11C196ECF0045EFCC /* MTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFD01C196ECE0045EFCC /* MTHomeViewController.swift */; };
+		9612CFD31C1973660045EFCC /* MTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFD21C1973660045EFCC /* MTNavigationController.swift */; };
+		9612CFD61C1977720045EFCC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFD51C1977720045EFCC /* UIColor+Extension.swift */; };
+		9612CFD81C1977E70045EFCC /* WBLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFD71C1977E70045EFCC /* WBLog.swift */; };
+		9612CFDA1C197AA60045EFCC /* UIView-Frame+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFD91C197AA60045EFCC /* UIView-Frame+Extension.swift */; };
+		9612CFDC1C197B970045EFCC /* UIBarButtomItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFDB1C197B970045EFCC /* UIBarButtomItem+Extension.swift */; };
+		9612D0051C19A9A50045EFCC /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9612D0011C19A9A50045EFCC /* categories.plist */; };
+		9612D0061C19A9A50045EFCC /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9612D0021C19A9A50045EFCC /* cities.plist */; };
+		9612D0071C19A9A50045EFCC /* cityGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9612D0031C19A9A50045EFCC /* cityGroups.plist */; };
+		9612D0081C19A9A50045EFCC /* sorts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9612D0041C19A9A50045EFCC /* sorts.plist */; };
+		9612D00A1C19AA120045EFCC /* MTCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0091C19AA120045EFCC /* MTCategory.swift */; };
+		9612D00C1C19AB140045EFCC /* MTCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D00B1C19AB140045EFCC /* MTCity.swift */; };
+		9612D00E1C19AB8C0045EFCC /* MTRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D00D1C19AB8C0045EFCC /* MTRegion.swift */; };
+		9612D0101C19ABD20045EFCC /* MTCityGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D00F1C19ABD20045EFCC /* MTCityGroup.swift */; };
+		9612D0291C19AD7C0045EFCC /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0131C19AD7C0045EFCC /* MJDictionaryCache.m */; };
+		9612D02A1C19AD7C0045EFCC /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0161C19AD7C0045EFCC /* MJExtensionConst.m */; };
+		9612D02B1C19AD7C0045EFCC /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0181C19AD7C0045EFCC /* MJFoundation.m */; };
+		9612D02C1C19AD7C0045EFCC /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D01A1C19AD7C0045EFCC /* MJProperty.m */; };
+		9612D02D1C19AD7C0045EFCC /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D01C1C19AD7C0045EFCC /* MJPropertyKey.m */; };
+		9612D02E1C19AD7C0045EFCC /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D01E1C19AD7C0045EFCC /* MJPropertyType.m */; };
+		9612D02F1C19AD7C0045EFCC /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0201C19AD7C0045EFCC /* NSObject+MJClass.m */; };
+		9612D0301C19AD7C0045EFCC /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0221C19AD7C0045EFCC /* NSObject+MJCoding.m */; };
+		9612D0311C19AD7C0045EFCC /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0241C19AD7C0045EFCC /* NSObject+MJKeyValue.m */; };
+		9612D0321C19AD7C0045EFCC /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0261C19AD7C0045EFCC /* NSObject+MJProperty.m */; };
+		9612D0331C19AD7C0045EFCC /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0281C19AD7C0045EFCC /* NSString+MJExtension.m */; };
+		9612D03C1C19AF680045EFCC /* MTCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D03B1C19AF680045EFCC /* MTCategoryViewController.swift */; };
+		9612D03E1C19B08B0045EFCC /* MTHomeTopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D03D1C19B08B0045EFCC /* MTHomeTopItem.swift */; };
+		9612D0401C19B0990045EFCC /* MTHomeTopItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9612D03F1C19B0990045EFCC /* MTHomeTopItem.xib */; };
+		9612D0421C19B71D0045EFCC /* MTHomeDropdownSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0411C19B71D0045EFCC /* MTHomeDropdownSubCell.swift */; };
+		9612D0441C19B90A0045EFCC /* MTHomeDropdownMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0431C19B90A0045EFCC /* MTHomeDropdownMainCell.swift */; };
+		9612D0461C19B99F0045EFCC /* MTHomeDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0451C19B99F0045EFCC /* MTHomeDropdown.swift */; };
+		9612D0481C19B9B10045EFCC /* MTHomeDropdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9612D0471C19B9B10045EFCC /* MTHomeDropdown.xib */; };
+		9612D04B1C19C9390045EFCC /* MTDistrictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D0491C19C9390045EFCC /* MTDistrictViewController.swift */; };
+		9612D04C1C19C9390045EFCC /* MTDistrictViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9612D04A1C19C9390045EFCC /* MTDistrictViewController.xib */; };
+		9612D04F1C19C98A0045EFCC /* MTCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612D04D1C19C98A0045EFCC /* MTCityViewController.swift */; };
+		9612D0501C19C98A0045EFCC /* MTCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9612D04E1C19C98A0045EFCC /* MTCityViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9612CFBB1C195D600045EFCC /* MTHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9612CFBE1C195D600045EFCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9612CFC01C195D600045EFCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9612CFC31C195D600045EFCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9612CFC51C195D600045EFCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9612CFC81C195D600045EFCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9612CFCA1C195D600045EFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9612CFD01C196ECE0045EFCC /* MTHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTHomeViewController.swift; path = ../../../MTHomeViewController.swift; sourceTree = "<group>"; };
+		9612CFD21C1973660045EFCC /* MTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTNavigationController.swift; path = ../../../MTNavigationController.swift; sourceTree = "<group>"; };
+		9612CFD51C1977720045EFCC /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9612CFD71C1977E70045EFCC /* WBLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBLog.swift; sourceTree = "<group>"; };
+		9612CFD91C197AA60045EFCC /* UIView-Frame+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView-Frame+Extension.swift"; sourceTree = "<group>"; };
+		9612CFDB1C197B970045EFCC /* UIBarButtomItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtomItem+Extension.swift"; sourceTree = "<group>"; };
+		9612D0011C19A9A50045EFCC /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		9612D0021C19A9A50045EFCC /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		9612D0031C19A9A50045EFCC /* cityGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityGroups.plist; sourceTree = "<group>"; };
+		9612D0041C19A9A50045EFCC /* sorts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sorts.plist; sourceTree = "<group>"; };
+		9612D0091C19AA120045EFCC /* MTCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCategory.swift; sourceTree = "<group>"; };
+		9612D00B1C19AB140045EFCC /* MTCity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCity.swift; sourceTree = "<group>"; };
+		9612D00D1C19AB8C0045EFCC /* MTRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRegion.swift; sourceTree = "<group>"; };
+		9612D00F1C19ABD20045EFCC /* MTCityGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCityGroup.swift; sourceTree = "<group>"; };
+		9612D0121C19AD7C0045EFCC /* MJDictionaryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDictionaryCache.h; sourceTree = "<group>"; };
+		9612D0131C19AD7C0045EFCC /* MJDictionaryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDictionaryCache.m; sourceTree = "<group>"; };
+		9612D0141C19AD7C0045EFCC /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		9612D0151C19AD7C0045EFCC /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
+		9612D0161C19AD7C0045EFCC /* MJExtensionConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConst.m; sourceTree = "<group>"; };
+		9612D0171C19AD7C0045EFCC /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		9612D0181C19AD7C0045EFCC /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		9612D0191C19AD7C0045EFCC /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		9612D01A1C19AD7C0045EFCC /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		9612D01B1C19AD7C0045EFCC /* MJPropertyKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyKey.h; sourceTree = "<group>"; };
+		9612D01C1C19AD7C0045EFCC /* MJPropertyKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyKey.m; sourceTree = "<group>"; };
+		9612D01D1C19AD7C0045EFCC /* MJPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPropertyType.h; sourceTree = "<group>"; };
+		9612D01E1C19AD7C0045EFCC /* MJPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPropertyType.m; sourceTree = "<group>"; };
+		9612D01F1C19AD7C0045EFCC /* NSObject+MJClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJClass.h"; sourceTree = "<group>"; };
+		9612D0201C19AD7C0045EFCC /* NSObject+MJClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJClass.m"; sourceTree = "<group>"; };
+		9612D0211C19AD7C0045EFCC /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		9612D0221C19AD7C0045EFCC /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		9612D0231C19AD7C0045EFCC /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		9612D0241C19AD7C0045EFCC /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		9612D0251C19AD7C0045EFCC /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		9612D0261C19AD7C0045EFCC /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		9612D0271C19AD7C0045EFCC /* NSString+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MJExtension.h"; sourceTree = "<group>"; };
+		9612D0281C19AD7C0045EFCC /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
+		9612D03A1C19AE1B0045EFCC /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		9612D03B1C19AF680045EFCC /* MTCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCategoryViewController.swift; sourceTree = "<group>"; };
+		9612D03D1C19B08B0045EFCC /* MTHomeTopItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHomeTopItem.swift; sourceTree = "<group>"; };
+		9612D03F1C19B0990045EFCC /* MTHomeTopItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTHomeTopItem.xib; sourceTree = "<group>"; };
+		9612D0411C19B71D0045EFCC /* MTHomeDropdownSubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHomeDropdownSubCell.swift; sourceTree = "<group>"; };
+		9612D0431C19B90A0045EFCC /* MTHomeDropdownMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHomeDropdownMainCell.swift; sourceTree = "<group>"; };
+		9612D0451C19B99F0045EFCC /* MTHomeDropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHomeDropdown.swift; sourceTree = "<group>"; };
+		9612D0471C19B9B10045EFCC /* MTHomeDropdown.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTHomeDropdown.xib; sourceTree = "<group>"; };
+		9612D0491C19C9390045EFCC /* MTDistrictViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTDistrictViewController.swift; sourceTree = "<group>"; };
+		9612D04A1C19C9390045EFCC /* MTDistrictViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDistrictViewController.xib; sourceTree = "<group>"; };
+		9612D04D1C19C98A0045EFCC /* MTCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCityViewController.swift; sourceTree = "<group>"; };
+		9612D04E1C19C98A0045EFCC /* MTCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTCityViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +119,7 @@
 		9612CFB21C195D600045EFCC = {
 			isa = PBXGroup;
 			children = (
+				9612D03A1C19AE1B0045EFCC /* bridge.h */,
 				9612CFBD1C195D600045EFCC /* MTHD */,
 				9612CFBC1C195D600045EFCC /* Products */,
 			);
@@ -54,14 +136,279 @@
 		9612CFBD1C195D600045EFCC /* MTHD */ = {
 			isa = PBXGroup;
 			children = (
+				9612CFFE1C19A8CE0045EFCC /* 第三方框架 */,
+				9612CFD41C1977720045EFCC /* 扩展Extantion */,
+				9612CFE71C19A8CE0045EFCC /* Classes */,
+				9612CFFF1C19A9860045EFCC /* Other */,
 				9612CFBE1C195D600045EFCC /* AppDelegate.swift */,
-				9612CFC01C195D600045EFCC /* ViewController.swift */,
-				9612CFC21C195D600045EFCC /* Main.storyboard */,
 				9612CFC51C195D600045EFCC /* Assets.xcassets */,
 				9612CFC71C195D600045EFCC /* LaunchScreen.storyboard */,
 				9612CFCA1C195D600045EFCC /* Info.plist */,
 			);
 			path = MTHD;
+			sourceTree = "<group>";
+		};
+		9612CFD41C1977720045EFCC /* 扩展Extantion */ = {
+			isa = PBXGroup;
+			children = (
+				9612CFD91C197AA60045EFCC /* UIView-Frame+Extension.swift */,
+				9612CFDB1C197B970045EFCC /* UIBarButtomItem+Extension.swift */,
+				9612CFD71C1977E70045EFCC /* WBLog.swift */,
+				9612CFD51C1977720045EFCC /* UIColor+Extension.swift */,
+			);
+			name = "扩展Extantion";
+			path = "Class/扩展Extantion";
+			sourceTree = "<group>";
+		};
+		9612CFE71C19A8CE0045EFCC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9612CFE81C19A8CE0045EFCC /* Discover(发现) */,
+				9612CFEC1C19A8CE0045EFCC /* Home(首页) */,
+				9612CFF01C19A8CE0045EFCC /* Main(主要) */,
+				9612CFF51C19A8CE0045EFCC /* Message(消息) */,
+				9612CFF91C19A8CE0045EFCC /* Profile(我) */,
+				9612CFFD1C19A8CE0045EFCC /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9612CFE81C19A8CE0045EFCC /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				9612CFE91C19A8CE0045EFCC /* Controller */,
+				9612CFEA1C19A8CE0045EFCC /* Moder */,
+				9612CFEB1C19A8CE0045EFCC /* View */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		9612CFE91C19A8CE0045EFCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9612CFEA1C19A8CE0045EFCC /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9612CFEB1C19A8CE0045EFCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9612CFEC1C19A8CE0045EFCC /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				9612CFED1C19A8CE0045EFCC /* Controller */,
+				9612CFEE1C19A8CE0045EFCC /* Moder */,
+				9612CFEF1C19A8CE0045EFCC /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		9612CFED1C19A8CE0045EFCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9612CFD01C196ECE0045EFCC /* MTHomeViewController.swift */,
+				9612D03B1C19AF680045EFCC /* MTCategoryViewController.swift */,
+				9612CFD21C1973660045EFCC /* MTNavigationController.swift */,
+				9612D0491C19C9390045EFCC /* MTDistrictViewController.swift */,
+				9612D04A1C19C9390045EFCC /* MTDistrictViewController.xib */,
+				9612D04D1C19C98A0045EFCC /* MTCityViewController.swift */,
+				9612D04E1C19C98A0045EFCC /* MTCityViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9612CFEE1C19A8CE0045EFCC /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+				9612D0091C19AA120045EFCC /* MTCategory.swift */,
+				9612D00B1C19AB140045EFCC /* MTCity.swift */,
+				9612D00D1C19AB8C0045EFCC /* MTRegion.swift */,
+				9612D00F1C19ABD20045EFCC /* MTCityGroup.swift */,
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9612CFEF1C19A8CE0045EFCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9612D0451C19B99F0045EFCC /* MTHomeDropdown.swift */,
+				9612D0471C19B9B10045EFCC /* MTHomeDropdown.xib */,
+				9612D0431C19B90A0045EFCC /* MTHomeDropdownMainCell.swift */,
+				9612D0411C19B71D0045EFCC /* MTHomeDropdownSubCell.swift */,
+				9612D03D1C19B08B0045EFCC /* MTHomeTopItem.swift */,
+				9612D03F1C19B0990045EFCC /* MTHomeTopItem.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9612CFF01C19A8CE0045EFCC /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				9612CFF11C19A8CE0045EFCC /* Controller */,
+				9612CFF31C19A8CE0045EFCC /* Moder */,
+				9612CFF41C19A8CE0045EFCC /* View */,
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		9612CFF11C19A8CE0045EFCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9612CFF31C19A8CE0045EFCC /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9612CFF41C19A8CE0045EFCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9612CFF51C19A8CE0045EFCC /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				9612CFF61C19A8CE0045EFCC /* Controller */,
+				9612CFF71C19A8CE0045EFCC /* Moder */,
+				9612CFF81C19A8CE0045EFCC /* View */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		9612CFF61C19A8CE0045EFCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9612CFF71C19A8CE0045EFCC /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9612CFF81C19A8CE0045EFCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9612CFF91C19A8CE0045EFCC /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				9612CFFA1C19A8CE0045EFCC /* Controller */,
+				9612CFFB1C19A8CE0045EFCC /* Moder */,
+				9612CFFC1C19A8CE0045EFCC /* View */,
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		9612CFFA1C19A8CE0045EFCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9612CFFB1C19A8CE0045EFCC /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
+		9612CFFC1C19A8CE0045EFCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9612CFFD1C19A8CE0045EFCC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		9612CFFE1C19A8CE0045EFCC /* 第三方框架 */ = {
+			isa = PBXGroup;
+			children = (
+				9612D0111C19AD7C0045EFCC /* MJExtension */,
+			);
+			name = "第三方框架";
+			path = "Classes/第三方框架";
+			sourceTree = "<group>";
+		};
+		9612CFFF1C19A9860045EFCC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9612D0001C19A9A50045EFCC /* Plist */,
+			);
+			name = Other;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9612D0001C19A9A50045EFCC /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				9612D0011C19A9A50045EFCC /* categories.plist */,
+				9612D0021C19A9A50045EFCC /* cities.plist */,
+				9612D0031C19A9A50045EFCC /* cityGroups.plist */,
+				9612D0041C19A9A50045EFCC /* sorts.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		9612D0111C19AD7C0045EFCC /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				9612D0121C19AD7C0045EFCC /* MJDictionaryCache.h */,
+				9612D0131C19AD7C0045EFCC /* MJDictionaryCache.m */,
+				9612D0141C19AD7C0045EFCC /* MJExtension.h */,
+				9612D0151C19AD7C0045EFCC /* MJExtensionConst.h */,
+				9612D0161C19AD7C0045EFCC /* MJExtensionConst.m */,
+				9612D0171C19AD7C0045EFCC /* MJFoundation.h */,
+				9612D0181C19AD7C0045EFCC /* MJFoundation.m */,
+				9612D0191C19AD7C0045EFCC /* MJProperty.h */,
+				9612D01A1C19AD7C0045EFCC /* MJProperty.m */,
+				9612D01B1C19AD7C0045EFCC /* MJPropertyKey.h */,
+				9612D01C1C19AD7C0045EFCC /* MJPropertyKey.m */,
+				9612D01D1C19AD7C0045EFCC /* MJPropertyType.h */,
+				9612D01E1C19AD7C0045EFCC /* MJPropertyType.m */,
+				9612D01F1C19AD7C0045EFCC /* NSObject+MJClass.h */,
+				9612D0201C19AD7C0045EFCC /* NSObject+MJClass.m */,
+				9612D0211C19AD7C0045EFCC /* NSObject+MJCoding.h */,
+				9612D0221C19AD7C0045EFCC /* NSObject+MJCoding.m */,
+				9612D0231C19AD7C0045EFCC /* NSObject+MJKeyValue.h */,
+				9612D0241C19AD7C0045EFCC /* NSObject+MJKeyValue.m */,
+				9612D0251C19AD7C0045EFCC /* NSObject+MJProperty.h */,
+				9612D0261C19AD7C0045EFCC /* NSObject+MJProperty.m */,
+				9612D0271C19AD7C0045EFCC /* NSString+MJExtension.h */,
+				9612D0281C19AD7C0045EFCC /* NSString+MJExtension.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +470,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9612D0081C19A9A50045EFCC /* sorts.plist in Resources */,
+				9612D0071C19A9A50045EFCC /* cityGroups.plist in Resources */,
+				9612D04C1C19C9390045EFCC /* MTDistrictViewController.xib in Resources */,
+				9612D0481C19B9B10045EFCC /* MTHomeDropdown.xib in Resources */,
 				9612CFC91C195D600045EFCC /* LaunchScreen.storyboard in Resources */,
 				9612CFC61C195D600045EFCC /* Assets.xcassets in Resources */,
-				9612CFC41C195D600045EFCC /* Main.storyboard in Resources */,
+				9612D0051C19A9A50045EFCC /* categories.plist in Resources */,
+				9612D0401C19B0990045EFCC /* MTHomeTopItem.xib in Resources */,
+				9612D0501C19C98A0045EFCC /* MTCityViewController.xib in Resources */,
+				9612D0061C19A9A50045EFCC /* cities.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +490,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9612CFC11C195D600045EFCC /* ViewController.swift in Sources */,
+				9612CFD11C196ECF0045EFCC /* MTHomeViewController.swift in Sources */,
+				9612D02B1C19AD7C0045EFCC /* MJFoundation.m in Sources */,
+				9612D03E1C19B08B0045EFCC /* MTHomeTopItem.swift in Sources */,
+				9612D02A1C19AD7C0045EFCC /* MJExtensionConst.m in Sources */,
 				9612CFBF1C195D600045EFCC /* AppDelegate.swift in Sources */,
+				9612D0461C19B99F0045EFCC /* MTHomeDropdown.swift in Sources */,
+				9612D00A1C19AA120045EFCC /* MTCategory.swift in Sources */,
+				9612CFDA1C197AA60045EFCC /* UIView-Frame+Extension.swift in Sources */,
+				9612D0441C19B90A0045EFCC /* MTHomeDropdownMainCell.swift in Sources */,
+				9612CFD31C1973660045EFCC /* MTNavigationController.swift in Sources */,
+				9612D04F1C19C98A0045EFCC /* MTCityViewController.swift in Sources */,
+				9612D03C1C19AF680045EFCC /* MTCategoryViewController.swift in Sources */,
+				9612CFDC1C197B970045EFCC /* UIBarButtomItem+Extension.swift in Sources */,
+				9612D0311C19AD7C0045EFCC /* NSObject+MJKeyValue.m in Sources */,
+				9612D0421C19B71D0045EFCC /* MTHomeDropdownSubCell.swift in Sources */,
+				9612D00E1C19AB8C0045EFCC /* MTRegion.swift in Sources */,
+				9612D02F1C19AD7C0045EFCC /* NSObject+MJClass.m in Sources */,
+				9612CFD81C1977E70045EFCC /* WBLog.swift in Sources */,
+				9612D0331C19AD7C0045EFCC /* NSString+MJExtension.m in Sources */,
+				9612CFD61C1977720045EFCC /* UIColor+Extension.swift in Sources */,
+				9612D04B1C19C9390045EFCC /* MTDistrictViewController.swift in Sources */,
+				9612D00C1C19AB140045EFCC /* MTCity.swift in Sources */,
+				9612D0101C19ABD20045EFCC /* MTCityGroup.swift in Sources */,
+				9612D02E1C19AD7C0045EFCC /* MJPropertyType.m in Sources */,
+				9612D0321C19AD7C0045EFCC /* NSObject+MJProperty.m in Sources */,
+				9612D0301C19AD7C0045EFCC /* NSObject+MJCoding.m in Sources */,
+				9612D02C1C19AD7C0045EFCC /* MJProperty.m in Sources */,
+				9612D0291C19AD7C0045EFCC /* MJDictionaryCache.m in Sources */,
+				9612D02D1C19AD7C0045EFCC /* MJPropertyKey.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9612CFC21C195D600045EFCC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9612CFC31C195D600045EFCC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9612CFC71C195D600045EFCC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -199,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -238,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -250,10 +623,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MTHD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift.MTHD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Debug;
 		};
@@ -261,10 +637,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MTHD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift.MTHD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Release;
 		};
@@ -287,6 +666,7 @@
 				9612CFCF1C195D600045EFCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
