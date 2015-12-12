@@ -112,10 +112,11 @@ class MTCityViewController: UIViewController,UITableViewDataSource,UITableViewDe
      *  搜索框里面的文字变化的时候调用
      */
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty { //为空
+        if searchText.isEmpty == true { //为空
             self.citySearchResult.view.hidden = true
         } else {
             self.citySearchResult.view.hidden = false
+            print("**\r\n***\(searchText)")
             self.citySearchResult.searchText = searchText;
    
         }
@@ -141,23 +142,9 @@ class MTCityViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     // MARK: - UITableViewDelegate
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        let group: MTCityGroup = self.cityGroups![section] as! MTCityGroup
-        return group.title as? String
-        
-    }
+
     
-    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-        //    NSMutableArray *titles = [NSMutableArray array];
-        //    for (MTCityGroup *group in self.cityGroups) {
-        //        [titles addObject:group.title];
-        //    }
-        //    return titles;
-        return cityGroups?.valueForKeyPath("title") as? [String]
-        
-        /// return cityGroups.map{_ in title} as? [String]
-    }
+
     
     
     
@@ -214,6 +201,31 @@ class MTCityViewController: UIViewController,UITableViewDataSource,UITableViewDe
         return cell!
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+        
+        return cityGroups?.valueForKeyPath("title") as? [String]
+        
+        /// return cityGroups.map{_ in title} as? [String]
+    }
+    
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        let group: MTCityGroup = self.cityGroups![section] as! MTCityGroup
+        return group.title as? String
+        
+    }
+    
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // 获得选中的城市
         let group = self.cityGroups![indexPath.section] as! MTCityGroup
@@ -223,6 +235,17 @@ class MTCityViewController: UIViewController,UITableViewDataSource,UITableViewDe
         // dissmiss自身
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     

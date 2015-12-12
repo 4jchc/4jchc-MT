@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTDistrictViewController" customModule="MTHD" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTRegionViewController" customModule="MTHD" customModuleProvider="target">
             <connections>
                 <outlet property="changeCity" destination="zTr-HU-NHv" id="UcV-85-B40"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -55,14 +55,6 @@
                         <constraint firstAttribute="trailing" secondItem="Qdv-Vu-ohN" secondAttribute="trailing" constant="14" id="yVV-iO-dKt"/>
                     </constraints>
                 </view>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sDf-sp-Iyi">
-                    <rect key="frame" x="275" y="254" width="121" height="29"/>
-                    <animations/>
-                    <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
-                    </segments>
-                </segmentedControl>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

@@ -12,23 +12,23 @@ class MTMetaTool: NSObject {
     
     //MARK: - 懒加载
     
-    lazy var cities:NSArray? = {
+   static var cities:NSArray? = {
         
         let ani = MTCity.mj_objectArrayWithFilename("cities.plist")
         
         return ani
     }()
     
-    lazy var categories:NSArray? = {
+    static var categories:NSArray? = {
         
-        let ani = MTCity.mj_objectArrayWithFilename("categories.plist")
+        let ani = MTCategory.mj_objectArrayWithFilename("categories.plist")
         
         return ani
     }()
 
-    lazy var sorts:NSArray? = {
+    static var sorts:NSArray? = {
         
-        let ani = MTCity.mj_objectArrayWithFilename("sorts.plist")
+        let ani = MTSort.mj_objectArrayWithFilename("sorts.plist")
         
         return ani
     }()

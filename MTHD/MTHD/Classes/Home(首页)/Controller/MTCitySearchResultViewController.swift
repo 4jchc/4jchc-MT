@@ -11,36 +11,33 @@ import UIKit
 class MTCitySearchResultViewController: UITableViewController {
 
     //MARK: - 懒加载
-    lazy var cities:NSArray? = {
-        
-        let ani = MTCity.mj_objectArrayWithFilename("cities.plist")
-        
-        return ani
-    }()
+
      var resultCities:NSArray?
 
     var searchText:NSString?{
         
         didSet{
-            
             searchText = searchText!.lowercaseString;
-            
-            //    self.resultCities = [NSMutableArray array];
-            //    // 根据关键字搜索想要的城市数据
-            //    for (MTCity *city in self.cities) {
-            //        // 城市的name中包含了searchText
-            //        // 城市的pinYin中包含了searchText beijing
-            //        // 城市的pinYinHead中包含了searchText
-            //        if ([city.name containsString:searchText] || [city.pinYin containsString:searchText] || [city.pinYinHead containsString:searchText]) {
-            //            [self.resultCities addObject:city];
-            //        }
-            //    }
+
             //MARK: - 过滤器NSPredicate
             // 谓词\过滤器:能利用一定的条件从一个数组中过滤出想要的数据
+           // resultCities.removeAll(keepCapacity: false)
+            
+//            for var city:MTCity  in MTMetaTool.cities! {
+//                // 城市的name中包含了searchText
+//                // 城市的pinYin中包含了searchText beijing
+//                // 城市的pinYinHead中包含了searchText
+//                if ((city.name?.rangeOfString(searchText) != nil) || (city.pinYin?.rangeOfString(searchText) != nil) || (city.pinYinHead?.rangeOfString(searchText) != nil) ) {
+//                    resultCities.append(city.name!)
+//                }
+//            }
+//            tableView.reloadData()
+            
+
             let predicate:NSPredicate = NSPredicate(format: "name contains %@ or pinYin contains %@ or pinYinHead contains %@", searchText!, searchText!, searchText!)
            
-            self.resultCities = self.cities?.filteredArrayUsingPredicate(predicate)
- 
+            self.resultCities = MTMetaTool.cities!.filteredArrayUsingPredicate(predicate)
+           
             self.tableView.reloadData()
             
         }
@@ -71,7 +68,10 @@ class MTCitySearchResultViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.resultCities!.count
+        
+        
+        
+        return  self.resultCities?.count ?? 0
     }
 
    
@@ -90,8 +90,16 @@ class MTCitySearchResultViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-
-        return "共有\(self.resultCities!.count)个搜索结果"
+       
+        if  let e = self.resultCities?.count {
+            
+            return "共有\(e)个搜索结果"
+        }else {
+            
+             return "共有\0个搜索结果"
+        }
+        //return "共有\(resultCities!.count)个搜索结果"
+       
         
     }
     
