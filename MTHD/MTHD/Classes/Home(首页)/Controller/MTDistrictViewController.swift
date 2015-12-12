@@ -20,24 +20,22 @@ class MTDistrictViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("**self.view.subviews***\(self.view.subviews)")
+
         // 读取xib文件//TODO:读取xib文件
         NSBundle.mainBundle().loadNibNamed("MTDistrictViewController", owner: self, options: nil)
-        print("**self.view.***\(self.view.subviews.first?.height)")
+    
         // 创建下拉菜单
         let title: UIView  = self.view.subviews.first!
         // 设置下拉菜单
         let dropdown = MTHomeDropdown.dropdown()
         
-        dropdown.y = 44//title.height
+        dropdown.y = title.height
         //dropdown.autoresizingMask = UIViewAutoresizing.None
         dropdown.backgroundColor = UIColor.blackColor()
         self.view.addSubview(dropdown)
         // 设置控制器在popover中的尺寸
-        print("**self.view.subviews***\(self.view.subviews)")
         self.preferredContentSize = CGSizeMake(dropdown.width, CGRectGetMaxY(dropdown.frame))
-        print("**self.view.subviews***\(self.view.subviews)")
-        // Do any additional setup after loading the view.
+
     }
     
     ///切换城市
@@ -49,7 +47,6 @@ class MTDistrictViewController: UIViewController {
         let city = MTCityViewController()
         let nav = MTNavigationController(rootViewController: city)
         nav.modalPresentationStyle = UIModalPresentationStyle.FormSheet
-        //UIApplication.sharedApplication().keyWindow?.rootViewController!.presentViewController(nav, animated: true, completion: nil)
         self.presentViewController(nav, animated: true, completion: nil)
        
     }

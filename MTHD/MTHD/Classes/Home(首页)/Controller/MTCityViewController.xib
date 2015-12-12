@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTCityViewController" customModule="MTHD" customModuleProvider="target">
             <connections>
                 <outlet property="cover" destination="QJN-3v-zXY" id="3I1-Eq-Oea"/>
-                <outlet property="searchBar" destination="1gr-iQ-Dls" id="gto-hQ-VNT"/>
+                <outlet property="searchBar" destination="1gr-iQ-Dls" id="QS4-Rf-3ef"/>
                 <outlet property="tableView" destination="PE1-uB-fvh" id="luz-BM-gXm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,7 +25,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="Kaa-06-8iR"/>
                     </constraints>
-                    <color key="barTintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.12549019607843137" green="0.74901960784313726" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="Lge-xQ-MWc"/>

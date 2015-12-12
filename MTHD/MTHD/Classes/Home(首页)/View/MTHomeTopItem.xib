@@ -65,6 +65,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="iconButton" destination="TsL-5X-WsX" id="SsN-tT-btm"/>
+                <outlet property="subtitleLabel" destination="AYl-bv-csU" id="xb2-zm-pFz"/>
+                <outlet property="titleLabel" destination="r94-rG-Car" id="mjz-xa-fa5"/>
             </connections>
             <point key="canvasLocation" x="281" y="272.5"/>
         </view>

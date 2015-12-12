@@ -58,7 +58,7 @@ class MTHomeViewController: UICollectionViewController {
         self.setupRightNav()
 //
 //        // 增加监听事件
-//        setupNotification()
+        setupNotification()
 //        
 //        // 继承父类协议
 //        delegate = self
@@ -123,6 +123,42 @@ class MTHomeViewController: UICollectionViewController {
     
     }
     
+    // MARK: - 增加监听事件
+    func setupNotification(){
+        
+        // 监听城市改变
+        MTNotificationCenter.addObserver(self, selector: "cityDidChange:", name: MTCityDidChangeNotification, object: nil)
+
+        MTNotificationCenter.addObserver(self, selector: "categoryDidChange:", name: SWCategoryDidChangeNotification, object: nil)
+        
+        
+        MTNotificationCenter.addObserver(self, selector: "regionDidChange:", name: SWRegionDidChangeNotification, object: nil)
+        
+        MTNotificationCenter.addObserver(self, selector: "sortDidChange:", name: SWSortDidChangeNotification, object: nil)
+        
+    }
+    deinit {
+        
+        MTNotificationCenter.removeObserver(self)
+      
+
+        //NSNotificationCenter.defaultCenter().removeObserver(self, name: SWSelectedRegion, object: nil)
+    }
+    
+    func cityDidChange(notification: NSNotification) {
+        
+        // 1.更换顶部区域item的文字
+
+        let cityName = notification.userInfo?[MTSelectCityName] as! String
+        let topItem = districtItem.customView as! MTHomeTopItem
+        topItem.title = "\(cityName) - 全部"
+        topItem.subtitle = ""
+        
+        // TODO: - 刷新表格数据
+       // collectionView?.headerBeginRefreshing()
+    
+        
+    }
     
     //MARK: -  顶部item点击方法
     func categoryClicked(){
