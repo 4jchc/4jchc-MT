@@ -11,7 +11,7 @@ import UIKit
 class MTRegion: NSObject {
     
     /** 区域名字 */
-    var name : String?
+    var name : String!
     
     /** 子区域 */
     var subregions : NSArray?

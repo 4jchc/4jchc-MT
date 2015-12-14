@@ -10,7 +10,7 @@
 // iPad中控制器的view的尺寸默认都是1024x768, MTHomeDropdown的尺寸默认是300x340
 // MTCategoryViewController显示在popover中,尺寸变为480x320, MTHomeDropdown的尺寸也跟着减小:0x0
 import UIKit
-
+//  分类控制器:显示分类列表
 class MTCategoryViewController: UIViewController,MTHomeDropdownDataSource, MTHomeDropdownDelegate {
 
 

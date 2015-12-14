@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow()
         self.window?.frame = UIScreen.mainScreen().bounds
         
-        self.window?.rootViewController = MTNavigationController(rootViewController: MTHomeViewController.init(collectionViewLayout: UICollectionViewLayout()))
+        self.window?.rootViewController = MTNavigationController(rootViewController: MTHomeViewController())
 
             
             

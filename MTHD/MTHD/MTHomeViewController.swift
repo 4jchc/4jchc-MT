@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
+class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
     
-    let reuseIdentifier = "Cell";
+    let reuseIdentifier = "deal";
     /** 导航栏上的按钮 */
      
     /** 分类item */
@@ -19,8 +19,17 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
     private var sortItem : UIBarButtonItem!
     /** 地区item */
     private var regionItem : UIBarButtonItem!
-    /** 地区item */
-   // private var districtItem : UIBarButtonItem!
+
+    
+    /** 请求参数 */
+     /** 当前选中的城市名字 */
+    private var selectedCityName : String!
+    /** 当前选中的区域名字 */
+    private var selectedRegionName : String!
+    /** 当前选中的分类名字 */
+    private var selectedCategoryName : String!
+    /** 当前选中的排序 */
+    private var selectedSort : MTSort!
     
 
     /** 分类popover */
@@ -29,53 +38,83 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
     private var regionPopover : UIPopoverController?
     /** 排序popover */
     private var sortPopover : UIPopoverController?
-    
-    
-    
-    /** 请求参数 */
-    /** 当前选中的城市名字 */
-    private var selectedCityName : String!
-    /** 当前选中的区域名字 */
-    private var selectedRegionName : String!
-    /** 当前选中的分类名字 */
-    private var selectedCategoryName : String!
-    /** 当前选中的排序 */
-    private var selectedSort : MTSort!
-
 
     
-    override init(collectionViewLayout layout: UICollectionViewLayout) {
-        super.init(collectionViewLayout: layout)
-    }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView?.registerClass(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: reuseIdentifier)
-        
-        // 设置背景颜色
-        self.collectionView!.backgroundColor = UIColor.RGB(230, 230, 230, 1)
-        
+        // 增加监听事件
+        setupNotification()
         
         // 设置导航栏属性
         self.setupLeftNav()
         self.setupRightNav()
-//
-//        // 增加监听事件
-        setupNotification()
-//        
-//        // 继承父类协议
-//        delegate = self
-//        
-//        // 设置左下角菜单
-//        setupAwesomeMenu()
+
+        // 设置左下角菜单awesomemenu
+        setupAwesomeMenu()
     }
     
     
+    //MARK:设置左下角菜单
+    func setupAwesomeMenu() {
+        
+        // 1.中间按钮
+        let startItem = AwesomeMenuItem(image: UIImage(named: "icon_pathMenu_background_highlighted"), highlightedImage: nil, contentImage: UIImage(named: "icon_pathMenu_mainMine_normal"), highlightedContentImage: nil)
+        // 2.周边按钮
+        let item0 = AwesomeMenuItem(image: UIImage(named: "bg_pathMenu_black_normal"), highlightedImage: nil, contentImage: UIImage(named: "icon_pathMenu_collect_normal"), highlightedContentImage: UIImage(named: "icon_pathMenu_collect_highlighted"))
+        let item1 = AwesomeMenuItem(image: UIImage(named: "bg_pathMenu_black_normal"), highlightedImage: nil, contentImage: UIImage(named: "icon_pathMenu_scan_normal"), highlightedContentImage: UIImage(named: "icon_pathMenu_scan_highlighted"))
+        let item2 = AwesomeMenuItem(image: UIImage(named: "bg_pathMenu_black_normal"), highlightedImage: nil, contentImage: UIImage(named: "icon_pathMenu_mine_normal"), highlightedContentImage: UIImage(named: "icon_pathMenu_mine_highlighted"))
+        let item3 = AwesomeMenuItem(image: UIImage(named: "bg_pathMenu_black_normal"), highlightedImage: nil, contentImage: UIImage(named: "icon_pathMenu_more_normal"), highlightedContentImage: UIImage(named: "icon_pathMenu_more_highlighted"))
+        
+        let items = [item0, item1, item2, item3]
+        
+        let menu = AwesomeMenu(frame: CGRectZero, startItem: startItem, optionMenus: items)
+        menu.alpha = 0.5
+        menu.menuWholeAngle = CGFloat(M_PI_2)
+        menu.startPoint = CGPoint(x: 50, y: 150)
+        menu.delegate = self
+        menu.rotateAddButton = false
+        view.addSubview(menu)
+        
+        // 3.设置菜单永远在左下角
+        menu.autoPinEdgeToSuperviewEdge(ALEdge.Left, withInset: 0)
+        menu.autoPinEdgeToSuperviewEdge(ALEdge.Bottom, withInset: 0)
+        menu.autoSetDimensionsToSize(CGSizeMake(200, 200))
+        
+    }
+    
+    //MARK: - AwesomeMenuDelegate
+    func awesomeMenuWillAnimateOpen(menu: AwesomeMenu!) {
+        // 替换菜单的图片
+        menu.contentImage = UIImage(named:"icon_pathMenu_cross_normal")
+        
+        // 完全显示
+        menu.alpha = 1.0;
+    }
+
+    func awesomeMenuWillAnimateClose(menu: AwesomeMenu!) {
+        // 替换菜单的图片
+        menu.contentImage = UIImage(named:"icon_pathMenu_mainMine_normal")
+        
+        // 半透明显示
+        menu.alpha = 0.5;
+    }
+
+    func awesomeMenu(menu: AwesomeMenu!, didSelectIndex idx: Int) {
+        // 替换菜单的图片
+        menu.contentImage = UIImage(named:"icon_pathMenu_mainMine_normal")
+
+        if idx == 0 { // 收藏纪录
+            let nav = MTNavigationController(rootViewController: MTCollectViewController())
+            presentViewController(nav, animated: true, completion: nil)
+        } else if idx == 1 {// 最近访问记录
+            let nav = MTNavigationController(rootViewController: MTRecentViewController())
+            presentViewController(nav, animated: true, completion: nil)
+        }
+    }
+ 
+
     
     // MARK: - 设置导航栏内容
     func setupLeftNav() {
@@ -135,6 +174,13 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
     }
     
     
+
+ 
+    
+    
+    
+    
+    
     func setupNotification(){
         
         
@@ -143,29 +189,23 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
         
         // 监听排序改变
         MTNotificationCenter.addObserver(self, selector: "sortDidChange:", name: MTSortDidChangeNotification, object: nil)
-       
+        
         // 监听分类改变
         MTNotificationCenter.addObserver(self, selector: "categoryDidChange:", name: MTCategoryDidChangeNotification, object: nil)
         
         // 监听区域改变
         MTNotificationCenter.addObserver(self, selector: "regionDidChange:", name: MTRegionDidChangeNotification, object: nil)
-
-
+        
+        
         
     }
     deinit {
         
         MTNotificationCenter.removeObserver(self)
-      
-
+        
+        
         //NSNotificationCenter.defaultCenter().removeObserver(self, name: SWSelectedRegion, object: nil)
     }
-    
-    
-    
-    
-    
-    
     
     
     // MARK: - 增加监听通知
@@ -176,12 +216,12 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
         let topItem = regionItem.customView as? MTHomeTopItem
         topItem!.title = "\(selectedCityName) - 全部"
         topItem!.subtitle = ""
-        
+
         // 2.刷新表格数据
-       self.loadNewDeals()
-    
-        
+        self.collectionView?.mj_header.beginRefreshing()
+  
     }
+    
     
     func categoryDidChange(notification: NSNotification) {
         
@@ -209,7 +249,7 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
         self.categoryPopover!.dismissPopoverAnimated(true)
         
         // 3.刷新表格数据
-        self.loadNewDeals()
+        self.collectionView?.mj_header.beginRefreshing()
 
     }
     
@@ -218,14 +258,20 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
     func regionDidChange(notification: NSNotification){
         
         let region: MTRegion  = notification.userInfo![MTSelectRegion] as! MTRegion
-        let subregionName: String  = notification.userInfo![MTSelectSubregionName] as! String
+        let subregionName  = notification.userInfo?[MTSelectSubregionName] as? String
         
-        if (subregionName.isEmpty == true || subregionName == "全部") { // 点击的数据没有子分类
+        if (subregionName == nil || subregionName == "全部") { // 点击的数据没有子分类
+            
             self.selectedRegionName = region.name! as String
-        } else {
+        } else  {
+            
             self.selectedRegionName = subregionName;
+            print("*\r\n\r\n\r\n子分类\(selectedRegionName)")
         }
-        if (self.selectedRegionName == "全部分类") {
+        
+        
+        if (self.selectedRegionName == "全部") {
+            
             self.selectedRegionName = nil;
         }
 
@@ -240,7 +286,7 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
         self.regionPopover!.dismissPopoverAnimated(true)
         
         // 3.刷新表格数据
-        self.loadNewDeals()
+        self.collectionView?.mj_header.beginRefreshing()
 
     }
     
@@ -256,25 +302,49 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
         self.sortPopover!.dismissPopoverAnimated(true)
         
         // 3.刷新表格数据
-        self.loadNewDeals()
+        self.collectionView?.mj_header.beginRefreshing()
     
+    }
+    
+    
+    //MARK: - 实现父类提供的方法
+    override func setupParams(params: NSMutableDictionary) {
+        // 城市
+        params["city"] = self.selectedCityName ?? "全国"
+        // 分类(类别)
+        if (self.selectedCategoryName != nil) {
+            
+            if selectedCategoryName == "全部分类" {
+                MBProgressHUD.showError("请选择一个分类")
+            } else {
+                params["category"] = selectedCategoryName
+            }
+            
+        }
+        // 区域
+        if (self.selectedRegionName != nil) {
+            params["region"] = self.selectedRegionName;
+        }
+        // 排序
+        if (self.selectedSort != nil) {
+            params["sort"] = (self.selectedSort.value);
+        }
+        
+    }
+
+
+
+
+    //MARK: -  顶部item点击方法
+
+    func search(){
+
+        let nav =  MTNavigationController(rootViewController: MTSearchViewController()) 
+        self.presentViewController(nav, animated: true, completion: nil)
+       
     }
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //MARK: -  顶部item点击方法
     func categoryClicked(){
       
         // 显示分类菜单
@@ -315,92 +385,39 @@ class MTHomeViewController: UICollectionViewController,DPRequestDelegate {
         self.sortPopover!.presentPopoverFromBarButtonItem(sortItem, permittedArrowDirections: .Any, animated: true)
 
         print("sortClick");
+
     }
 
     
     
     
     
-    //MARK:  - 跟服务器交互
-    func loadNewDeals(){
 
-        let api = DPAPI()
-        let params: NSMutableDictionary = NSMutableDictionary()
-        // 城市
-        params["city"] = self.selectedCityName;
-        // 每页的条数
-        params["limit"] = 5
-        // 分类(类别)
-        if ((self.selectedCategoryName) != nil) {
-            params["category"] = self.selectedCategoryName;
-        }
-        // 区域
-        if ((self.selectedRegionName) != nil) {
-            params["region"] = self.selectedRegionName;
-        }
-        // 排序
-        if ((self.selectedSort) != nil) {
-            params["sort"] = (self.selectedSort.value);
-        }
-        api.requestWithURL("v1/deal/find_deals", params: params, delegate: self)
-
-        print("请求参数:%@", params);
-    }
-    
-    
-    
-    
-    
-    func request(request: DPRequest!, didFinishLoadingWithResult result: AnyObject!) {
-        //print("请求成功--%@", result);
-        
-    }
-    
-    func request(request: DPRequest!, didFailWithError error: NSError!) {
-        
-        //MBProgressHUD.showError("网络繁忙，请稍后再试")
-        //print("请求失败--%@", error);
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //MARK: -  <UICollectionViewDataSource>
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0;
-    }
-
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 0
-    }
-    
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        let cell:UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier as String, forIndexPath: indexPath)
-        return cell
-    }
-    
 
     
-
-    
-    
-    
-    
+//    //MARK: -  <UICollectionViewDataSource>
+//    
+//    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+//        print("**CollectionView的个数\r\n***\(deals?.count)")
+//        return 24
+//        //return (deals?.count)! ?? 0
+//    }
+//    
+//    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        
+//        return deals!.count
+//    }
+//
+//    
+//    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+//        
+// 
+//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MTDealCell
+//        cell.backgroundColor = UIColor.redColor()
+//        //cell.deal = self.deals![indexPath.item] as? MTDeal;
+//       
+//        return cell
+//    }
+//    
+   
 }

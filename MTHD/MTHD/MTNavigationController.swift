@@ -14,7 +14,9 @@ class MTNavigationController: UINavigationController {
     override class func initialize () {
         let bar = UINavigationBar.appearance()
         bar.setBackgroundImage(UIImage(named: "bg_navigationBar_normal"), forBarMetrics: UIBarMetrics.Default)
-    
+  
     }
+    
+    
 
 }

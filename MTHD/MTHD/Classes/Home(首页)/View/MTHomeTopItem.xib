@@ -12,29 +12,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r94-rG-Car">
-                    <rect key="frame" x="58" y="0.0" width="74" height="16"/>
+                    <rect key="frame" x="50" y="0.0" width="90" height="16"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="3f0-KR-MD5"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYl-bv-csU">
-                    <rect key="frame" x="58" y="19" width="74" height="16"/>
+                    <rect key="frame" x="50" y="19" width="90" height="16"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="16" id="Fa9-fc-eYn"/>
+                        <constraint firstAttribute="height" constant="16" id="XUY-DC-oEe"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkB-1D-Gus">
-                    <rect key="frame" x="5" y="5" width="1" height="25"/>
+                    <rect key="frame" x="5" y="5" width="2" height="25"/>
                     <animations/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="2" id="Ntt-St-fWd"/>
+                    </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TsL-5X-WsX">
                     <rect key="frame" x="10" y="0.0" width="130" height="35"/>
@@ -47,19 +50,18 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="TsL-5X-WsX" secondAttribute="bottom" id="3oM-bZ-gm9"/>
-                <constraint firstItem="AYl-bv-csU" firstAttribute="leading" secondItem="fkB-1D-Gus" secondAttribute="trailing" constant="52" id="BYe-09-y4E"/>
+                <constraint firstItem="AYl-bv-csU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="6cg-Nt-HVm"/>
                 <constraint firstAttribute="trailing" secondItem="TsL-5X-WsX" secondAttribute="trailing" id="MLH-1F-4AV"/>
-                <constraint firstAttribute="trailing" secondItem="AYl-bv-csU" secondAttribute="trailing" constant="8" id="MXV-ev-emA"/>
-                <constraint firstItem="AYl-bv-csU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="58" id="Mw0-fJ-zeU"/>
                 <constraint firstItem="TsL-5X-WsX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="OE3-Qh-Fgc"/>
-                <constraint firstItem="fkB-1D-Gus" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="PPe-as-sXs"/>
                 <constraint firstItem="TsL-5X-WsX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QNP-Jk-aoh"/>
-                <constraint firstAttribute="bottom" secondItem="AYl-bv-csU" secondAttribute="bottom" id="cLX-0e-2tg"/>
-                <constraint firstAttribute="bottom" secondItem="fkB-1D-Gus" secondAttribute="bottom" constant="5" id="cfB-VE-PvH"/>
-                <constraint firstAttribute="trailing" secondItem="r94-rG-Car" secondAttribute="trailing" constant="8" id="dY1-ur-QqU"/>
+                <constraint firstAttribute="trailing" secondItem="AYl-bv-csU" secondAttribute="trailing" id="Qdp-Nl-IMS"/>
+                <constraint firstAttribute="bottom" secondItem="fkB-1D-Gus" secondAttribute="bottom" constant="5" id="ZZc-IS-zPr"/>
+                <constraint firstAttribute="bottom" secondItem="AYl-bv-csU" secondAttribute="bottom" id="cZB-9f-b65"/>
+                <constraint firstAttribute="trailing" secondItem="r94-rG-Car" secondAttribute="trailing" id="dY1-ur-QqU"/>
                 <constraint firstItem="r94-rG-Car" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dwm-2r-DVn"/>
-                <constraint firstItem="fkB-1D-Gus" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="ka8-ZZ-vJt"/>
-                <constraint firstItem="r94-rG-Car" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="58" id="vuR-9H-XFX"/>
+                <constraint firstItem="fkB-1D-Gus" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="oBA-9P-FmD"/>
+                <constraint firstItem="fkB-1D-Gus" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="tiW-v5-fYS"/>
+                <constraint firstItem="r94-rG-Car" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="vuR-9H-XFX"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
