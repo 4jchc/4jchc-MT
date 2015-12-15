@@ -54,13 +54,13 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
     convenience init() {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSizeMake(305, 305)
-//        let cols: CGFloat = (UIScreen.mainScreen().bounds.width == 1024) ? 3 : 2
+        let cols: CGFloat = (UIScreen.mainScreen().bounds.width == 1024) ? 3 : 2
+        
+        let inset = (UIScreen.mainScreen().bounds.width - cols * layout.itemSize.width) / (cols + 1)
+//
+        layout.sectionInset = UIEdgeInsetsMake(inset, inset, inset, inset)
 //        
-//        let inset = (UIScreen.mainScreen().bounds.width - cols * layout.itemSize.width) / (cols + 1)
-//        
-//        layout.sectionInset = UIEdgeInsetsMake(inset, inset, inset, inset)
-//        
-//        layout.minimumLineSpacing = inset
+        layout.minimumLineSpacing = inset
         self.init(collectionViewLayout: layout)
     }
 
@@ -91,20 +91,22 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
     /**
      当屏幕旋转,控制器view的尺寸发生改变调用
      */
-//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator?) {
-//        
-//        // 根据屏幕宽度决定列数
-//        
-//        let cols: CGFloat = (size.width == 1024) ? 2 : 3
-//        // 根据列数计算内边距
-//        let layout =  UICollectionViewFlowLayout()
-////        let inset = (size.width - cols * layout.itemSize.width) / (cols + 1)
-////        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
-//        // 设置每一行之间的间距
-//        layout.minimumLineSpacing = 50
-//       // print("**屏幕宽度***\(size.width)*****每一行之间的间距\(inset) ****\(cols * layout.itemSize.width)) ***\(cols)")
-//        
-//    }
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator?) {
+       
+        // 根据屏幕宽度决定列数
+        // 根据列数计算内边距
+        
+        let cols: CGFloat = (size.width == 1024) ? 3 : 2
+        
+        //MARK: 💗一定要是self.collectionViewLayout as! UICollectionViewFlowLayout 不然尺寸不对
+        let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
+        let inset = (size.width - cols * layout.itemSize.width) / (cols + 1)
+        layout.sectionInset = UIEdgeInsetsMake(inset, inset, inset, inset)
+        // 设置每一行之间的间距
+        layout.minimumLineSpacing = inset
+        print("**屏幕宽度***\(size.width)*****每一行之间的间距\(inset) ****\(cols * layout.itemSize.width)) ***\(cols)")
+        
+    }
     
     
     //MARK: - 跟服务器交互请求数据方法

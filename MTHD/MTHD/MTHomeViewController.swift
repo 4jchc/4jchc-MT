@@ -126,7 +126,7 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
         
         // 2. 类别
         let categoryTopItem = MTHomeTopItem.item()
-        categoryTopItem.addTarget(self, action: "categoryClicked")
+        categoryTopItem.addTarget(self, action: "categoryClick")
 
         let categoryItem = UIBarButtonItem(customView: categoryTopItem)
         self.categoryItem = categoryItem
@@ -225,11 +225,11 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
     
     func categoryDidChange(notification: NSNotification) {
         
-        let category: MTCategory  = notification.userInfo![MTSelectCategory] as! MTCategory
-        let subcategoryName: String  = notification.userInfo![MTSelectSubcategoryName] as! String
+        let category  = notification.userInfo![MTSelectCategory] as? MTCategory
+        let subcategoryName  = notification.userInfo![MTSelectSubcategoryName] as? String
         
-        if (subcategoryName.isEmpty == true || subcategoryName == "全部") { // 点击的数据没有子分类
-            self.selectedCategoryName = category.name;
+        if (subcategoryName == nil || subcategoryName == "全部") { // 点击的数据没有子分类
+            self.selectedCategoryName = category!.name;
         } else {
             self.selectedCategoryName = subcategoryName;
         }
@@ -240,8 +240,8 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
         // 1.更换顶部item的文字
         let topItem: MTHomeTopItem = self.categoryItem.customView as! MTHomeTopItem
         
-        topItem.setIcon(category.icon!, highIcon: category.highlighted_icon!)
-        topItem.title = category.name
+        topItem.setIcon(category!.icon!, highIcon: category!.highlighted_icon!)
+        topItem.title = category!.name
      
         topItem.subtitle = subcategoryName
         
@@ -314,7 +314,7 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
         // 分类(类别)
         if (self.selectedCategoryName != nil) {
             
-            if selectedCategoryName == "全部分类" {
+            if selectedCategoryName == "全部" {
                 MBProgressHUD.showError("请选择一个分类")
             } else {
                 params["category"] = selectedCategoryName
@@ -347,7 +347,7 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
     }
 
     
-    func categoryClicked(){
+    func categoryClick(){
       
         // 显示分类菜单
         self.categoryPopover = UIPopoverController(contentViewController: MTCategoryViewController())
@@ -396,30 +396,5 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
     
 
 
-    
-//    //MARK: -  <UICollectionViewDataSource>
-//    
-//    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-//        print("**CollectionView的个数\r\n***\(deals?.count)")
-//        return 24
-//        //return (deals?.count)! ?? 0
-//    }
-//    
-//    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        
-//        return deals!.count
-//    }
-//
-//    
-//    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-//        
-// 
-//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MTDealCell
-//        cell.backgroundColor = UIColor.redColor()
-//        //cell.deal = self.deals![indexPath.item] as? MTDeal;
-//       
-//        return cell
-//    }
-//    
-   
+
 }

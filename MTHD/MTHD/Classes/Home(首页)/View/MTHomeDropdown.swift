@@ -178,6 +178,7 @@ class MTHomeDropdown: UIView ,UITableViewDataSource,UITableViewDelegate{
             // 2.刷新右表的数据
             subTableView.reloadData()
             // 3.将该事件通知代理
+//            if self.delegate(respondsToSelector())
             if let delegate = self.delegate {
                 delegate.didSelectRowInMainTable(indexPath.row)
             }

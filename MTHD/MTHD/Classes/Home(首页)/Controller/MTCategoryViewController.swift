@@ -101,8 +101,8 @@ class MTCategoryViewController: UIViewController,MTHomeDropdownDataSource, MTHom
     func didSelectRowInMainTable(row: Int) -> Void {
  
         // 假如点击的main row是全部或者右侧没有subregion 则发送通知
-        let category: MTCategory = MTMetaTool.categories![row] as! MTCategory;
-        if((row == 0) || (category.subcategories?.count == 0)) {
+        let category = MTMetaTool.categories![row] as! MTCategory;
+        if((row == 0) || (category.subcategories == nil)) {
             
             // 发出通知
             MTNotificationCenter.postNotificationName(MTCategoryDidChangeNotification, object: nil, userInfo: [MTSelectCategory : category])
@@ -121,10 +121,6 @@ class MTCategoryViewController: UIViewController,MTHomeDropdownDataSource, MTHom
         //dismissViewControllerAnimated(true, completion: nil)
     }
 
-    
-    
-    
-    
 }
 
 
