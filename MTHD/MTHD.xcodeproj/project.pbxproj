@@ -391,7 +391,6 @@
 				9612CFEC1C19A8CE0045EFCC /* Home(首页) */,
 				9612CFF01C19A8CE0045EFCC /* Main(主要) */,
 				9612CFF51C19A8CE0045EFCC /* Message(消息) */,
-				9612CFF91C19A8CE0045EFCC /* Profile(我) */,
 				9612CFFD1C19A8CE0045EFCC /* Tools */,
 			);
 			path = Classes;
@@ -541,37 +540,6 @@
 			sourceTree = "<group>";
 		};
 		9612CFF81C19A8CE0045EFCC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9612CFF91C19A8CE0045EFCC /* Profile(我) */ = {
-			isa = PBXGroup;
-			children = (
-				9612CFFA1C19A8CE0045EFCC /* Controller */,
-				9612CFFB1C19A8CE0045EFCC /* Moder */,
-				9612CFFC1C19A8CE0045EFCC /* View */,
-			);
-			path = "Profile(我)";
-			sourceTree = "<group>";
-		};
-		9612CFFA1C19A8CE0045EFCC /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		9612CFFB1C19A8CE0045EFCC /* Moder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Moder;
-			sourceTree = "<group>";
-		};
-		9612CFFC1C19A8CE0045EFCC /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);

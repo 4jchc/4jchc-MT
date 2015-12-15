@@ -13,6 +13,7 @@ class MTSort: NSObject {
     /** 排序名称 */
     var label : String?
     /** 排序的值(将来发给服务器) */
-    var value : Int?
+    var value : NSNumber?
+    
 
 }

@@ -68,7 +68,7 @@ class MTSortViewController: UIViewController {
             button.height = btnH;
             button.x = btnX;
             button.y = btnStartY + CGFloat(i) * (btnH + btnMargin);
-            button.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+            button.addTarget(self, action: "buttonClick:", forControlEvents: UIControlEvents.TouchUpInside)
 
             button.tag = i;
             view.addSubview(button)
@@ -85,7 +85,7 @@ class MTSortViewController: UIViewController {
         
     }
     // MARK: - 按键触发事件（通过view.tag来区分是哪个按钮）
-    func buttonClicked(button: MTSortButton) -> Void {
+    func buttonClick(button: MTSortButton) -> Void {
         print("clicked \(button.tag)")
         
         // 发送通知

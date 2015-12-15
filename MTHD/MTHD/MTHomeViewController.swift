@@ -327,7 +327,9 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
         }
         // 排序
         if (self.selectedSort != nil) {
+            print("*****\(self.selectedSort.value)******\(self.selectedSort)")
             params["sort"] = (self.selectedSort.value);
+            
         }
         
     }

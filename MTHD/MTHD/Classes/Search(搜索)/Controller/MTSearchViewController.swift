@@ -14,7 +14,7 @@ class MTSearchViewController: MTDealsViewController,UISearchBarDelegate {
         super.viewDidLoad()
 
         // 左边的返回
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.ItemWithImageTarget(self, action: "back", image: "icon_back ", hightImage: " icon_back_highlighted")
+    self.navigationItem.leftBarButtonItem = UIBarButtonItem.ItemWithImageTarget(self, action: "back", image: "icon_back", hightImage: "icon_back_highlighted")
 
         
         //    UIView *titleView = [[UIView alloc] init];
@@ -25,7 +25,7 @@ class MTSearchViewController: MTDealsViewController,UISearchBarDelegate {
         
         // 中间的搜索框
         let searchBar: UISearchBar = UISearchBar()
-        searchBar.placeholder = "请输入关键词";
+        searchBar.placeholder = "请输入关键词请输入关键词请输入关键词";
         searchBar.delegate = self;
         self.navigationItem.titleView = searchBar;
         //    searchBar.frame = titleView.bounds;
@@ -35,16 +35,20 @@ class MTSearchViewController: MTDealsViewController,UISearchBarDelegate {
     func back() {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
-   //MARK: -  搜索框代理
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         // 进入下拉刷新状态, 发送请求给服务器
         self.collectionView?.mj_header.beginRefreshing()
         // 退出键盘
         searchBar.resignFirstResponder()
+    }
+   //MARK: -  搜索框代理
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+
         
     }
     //MARK:  - 实现父类提供的方法
+    
     override func setupParams(params: NSMutableDictionary) {
         params["city"] = "北京";
         let bar: UISearchBar  = self.navigationItem.titleView as! UISearchBar

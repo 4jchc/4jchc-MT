@@ -77,11 +77,10 @@ class MTDealCell: UICollectionViewCell {
     }
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
-
-            // 平铺
-            //    [[UIImage imageNamed:@"bg_dealcell"] drawAsPatternInRect:rect];
-            // 拉伸
+        //拉伸
         UIImage(named: "bg_dealcell")?.drawInRect(rect)
+        //平铺
+        //UIImage(named: "bg_dealcell")?.drawAsPatternInRect(rect)
         }
     
     }

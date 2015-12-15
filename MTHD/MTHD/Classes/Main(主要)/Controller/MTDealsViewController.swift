@@ -54,13 +54,13 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
     convenience init() {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSizeMake(305, 305)
-        let cols: CGFloat = (UIScreen.mainScreen().bounds.width == 1024) ? 3 : 2
-        
-        let inset = (UIScreen.mainScreen().bounds.width - cols * layout.itemSize.width) / (cols + 1)
-        
-        layout.sectionInset = UIEdgeInsetsMake(inset, inset, inset, inset)
-        
-        layout.minimumLineSpacing = inset
+//        let cols: CGFloat = (UIScreen.mainScreen().bounds.width == 1024) ? 3 : 2
+//        
+//        let inset = (UIScreen.mainScreen().bounds.width - cols * layout.itemSize.width) / (cols + 1)
+//        
+//        layout.sectionInset = UIEdgeInsetsMake(inset, inset, inset, inset)
+//        
+//        layout.minimumLineSpacing = inset
         self.init(collectionViewLayout: layout)
     }
 
@@ -71,7 +71,10 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        // 设置背景颜色
+        self.collectionView!.backgroundColor = UIColor.RGB(230, 230, 230, 1)
+        
+
         self.collectionView?.registerNib(UINib(nibName: "MTDealCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         collectionView?.alwaysBounceVertical = true
 
@@ -88,18 +91,20 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
     /**
      当屏幕旋转,控制器view的尺寸发生改变调用
      */
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator?) {
-        
-        // 根据屏幕宽度决定列数
-        let cols: CGFloat = (size.width == 1024) ? 3 : 2
-        // 根据列数计算内边距
-        let layout =  UICollectionViewFlowLayout()
-        let inset = (size.width - cols * layout.itemSize.width) / (cols + 1)
-        layout.sectionInset = UIEdgeInsetsMake(inset, inset, inset, inset)
-        // 设置每一行之间的间距
-        layout.minimumLineSpacing = inset
-        
-    }
+//    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator?) {
+//        
+//        // 根据屏幕宽度决定列数
+//        
+//        let cols: CGFloat = (size.width == 1024) ? 2 : 3
+//        // 根据列数计算内边距
+//        let layout =  UICollectionViewFlowLayout()
+////        let inset = (size.width - cols * layout.itemSize.width) / (cols + 1)
+////        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+//        // 设置每一行之间的间距
+//        layout.minimumLineSpacing = 50
+//       // print("**屏幕宽度***\(size.width)*****每一行之间的间距\(inset) ****\(cols * layout.itemSize.width)) ***\(cols)")
+//        
+//    }
     
     
     //MARK: - 跟服务器交互请求数据方法
@@ -136,7 +141,7 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
     
     func request(request: DPRequest!, didFinishLoadingWithResult result: AnyObject!) {
         
-        MBProgressHUD.showSuccess("请求成功")
+        MBProgressHUD.showSuccess("请求成功", toView: self.view)
         print("**请求成功请求成功请求成功***\(result)")
         //MBProgressHUD.showError(, toView: self.view)
         if request != lastRequest {
@@ -188,16 +193,17 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
     // MARK: UICollectionViewDataSource
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
+        // 计算一遍内边距
+        //self.viewWillTransitionToSize(CGSizeMake(collectionView.width, 0), withTransitionCoordinator:nil)
+        
         return 1
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        // 计算一遍内边距
-        self.viewWillTransitionToSize(CGSizeMake(collectionView.width, 0), withTransitionCoordinator:nil)
-        
+        //self.viewWillTransitionToSize(CGSizeMake(collectionView.width, 0), withTransitionCoordinator:nil)
         // 控制尾部刷新控件的显示和隐藏
-        //self.collectionView?.mj_footer.hidden = (self.totalCount == self.deals!.count);
+        self.collectionView?.mj_footer.hidden = (self.totalCount == self.deals?.count);
         
         // 控制"没有数据"的提醒
         self.noDataView!.hidden = (self.deals!.count != 0);
