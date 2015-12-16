@@ -8,10 +8,10 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+
 
 class MTRecentViewController: UICollectionViewController {
-
+private let reuseIdentifier = "Cell"
     
     // 这是一个便利构造器
     convenience init() {

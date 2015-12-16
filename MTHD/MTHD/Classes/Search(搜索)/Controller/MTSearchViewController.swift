@@ -9,7 +9,10 @@
 import UIKit
 
 class MTSearchViewController: MTDealsViewController,UISearchBarDelegate {
-
+    
+    
+    var cityName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,7 +53,7 @@ class MTSearchViewController: MTDealsViewController,UISearchBarDelegate {
     //MARK:  - 实现父类提供的方法
     
     override func setupParams(params: NSMutableDictionary) {
-        params["city"] = "北京";
+        params["city"] = self.cityName;
         let bar: UISearchBar  = self.navigationItem.titleView as! UISearchBar
         params["keyword"] = bar.text;
     }

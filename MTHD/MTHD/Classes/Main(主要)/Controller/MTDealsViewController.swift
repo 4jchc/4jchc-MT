@@ -57,9 +57,9 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
         let cols: CGFloat = (UIScreen.mainScreen().bounds.width == 1024) ? 3 : 2
         
         let inset = (UIScreen.mainScreen().bounds.width - cols * layout.itemSize.width) / (cols + 1)
-//
+
         layout.sectionInset = UIEdgeInsetsMake(inset, inset, inset, inset)
-//        
+        
         layout.minimumLineSpacing = inset
         self.init(collectionViewLayout: layout)
     }
@@ -144,7 +144,7 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
     func request(request: DPRequest!, didFinishLoadingWithResult result: AnyObject!) {
         
         MBProgressHUD.showSuccess("请求成功", toView: self.view)
-        print("**请求成功请求成功请求成功***\(result)")
+        //print("**请求成功请求成功请求成功***\(result)")
         //MBProgressHUD.showError(, toView: self.view)
         if request != lastRequest {
             return
@@ -157,16 +157,17 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
            self.deals!.removeAllObjects()
         }
        self.deals?.addObjectsFromArray(newDeals as [AnyObject])
-        // 3.结束上拉加载
-        self.collectionView?.mj_header.endRefreshing()
-        self.collectionView?.mj_footer.endRefreshing()
         
         // 2.刷新表格
         collectionView!.reloadData()
+        // 3.结束上拉加载
+        self.collectionView?.mj_header.endRefreshing()
+        self.collectionView?.mj_footer.endRefreshing()
+
         
         
     }
-    
+
     
     
     func request(request: DPRequest!, didFailWithError error: NSError!) {
@@ -227,5 +228,12 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
 
     // MARK: UICollectionViewDelegate
 
-
+    override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let detailVc: MTDetailViewController = MTDetailViewController()
+        detailVc.deal = self.deals![indexPath.item] as! MTDeal;
+        print("***detailVc.deal**\(detailVc.deal))")
+        presentViewController(detailVc, animated: true, completion: nil)
+       
+    }
 }

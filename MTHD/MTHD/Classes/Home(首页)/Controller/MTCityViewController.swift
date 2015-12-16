@@ -188,7 +188,7 @@ class MTCityViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let ID:String = "cell"
+        let ID:String = "city"
         var cell = tableView.dequeueReusableCellWithIdentifier(ID  as String)
         
         if cell == nil {

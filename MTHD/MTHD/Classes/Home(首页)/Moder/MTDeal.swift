@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MTDeal: NSObject {
+class MTDeal: EVObject {
     
     /** 团购单ID */
     var deal_id: String = ""
@@ -30,29 +30,41 @@ class MTDeal: NSObject {
     /** string	团购发布上线日期 */
     var publish_date: String = ""
     
+    /** string	团购单的截止购买日期 */
+    var purchase_deadline:String = ""
+    /** string	团购HTML5页面链接，适用于移动应用和联网车载应用 */
+    var deal_h5_url: String = ""
+    
+    /** 团购限制条件 */
+    var restrictions: MTRestrictions = MTRestrictions()
+    
+    ///MJ 转模型用
     override static func mj_replacedKeyFromPropertyName() -> [NSObject : AnyObject]! {
         
         return ["desc" : "description"]
     }
 
-    
+    override func isEqual(object: AnyObject?) -> Bool {
+        return (self.deal_id as NSString).isEqual(deal_id)
+    }
+    ///国外大神存档用 --EVReflection
+    override func propertyMapping() -> [(String?, String?)] {
+        return [("desc","description")]
+    }
+
     
     
 //    /** 团购发布上线日期 */
 //    var publish_date: String = ""
 //    /** 团购过期日期 */
 //    var purchase_deadline: String = ""
-//    /** 订单详情页面 */
-//    var deal_h5_url: String = ""
+
 //    
 //    /** 编辑状态 */
 //    var edit: Bool = false
 //    /** 被选中 */
 //    var checking: Bool = false
-//    
-//    /** 团购限制条件 */
-//    var restrictions: SWRestrictions = SWRestrictions()
-//    
+
 //    /** 团购类型 */
 //    var categories: [String] = []
 //    

@@ -108,6 +108,21 @@
 		9630F4D41C1D4308000C56BB /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630F4BF1C1D4308000C56BB /* UIScrollView+MJExtension.m */; };
 		9630F4D51C1D4308000C56BB /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630F4C11C1D4308000C56BB /* UIScrollView+MJRefresh.m */; };
 		9630F4D61C1D4308000C56BB /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9630F4C31C1D4308000C56BB /* UIView+MJExtension.m */; };
+		963D8B1A1C200395001CDAFC /* MTRestrictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B191C200395001CDAFC /* MTRestrictions.swift */; };
+		963D8B1D1C20056F001CDAFC /* MTDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B1B1C20056F001CDAFC /* MTDetailViewController.swift */; };
+		963D8B1E1C20056F001CDAFC /* MTDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963D8B1C1C20056F001CDAFC /* MTDetailViewController.xib */; };
+		963D8B201C201DCE001CDAFC /* MTDealTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B1F1C201DCE001CDAFC /* MTDealTool.swift */; };
+		963D8B2D1C201FC3001CDAFC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B231C201FC3001CDAFC /* FMDatabase.m */; };
+		963D8B2E1C201FC3001CDAFC /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B251C201FC3001CDAFC /* FMDatabaseAdditions.m */; };
+		963D8B2F1C201FC3001CDAFC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B271C201FC3001CDAFC /* FMDatabasePool.m */; };
+		963D8B301C201FC3001CDAFC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B291C201FC3001CDAFC /* FMDatabaseQueue.m */; };
+		963D8B311C201FC3001CDAFC /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B2C1C201FC3001CDAFC /* FMResultSet.m */; };
+		963D8B331C203904001CDAFC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 963D8B321C203904001CDAFC /* libsqlite3.tbd */; };
+		963D8B391C204190001CDAFC /* EVExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B351C204190001CDAFC /* EVExtensions.swift */; };
+		963D8B3A1C204190001CDAFC /* EVObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B361C204190001CDAFC /* EVObject.swift */; };
+		963D8B3B1C204190001CDAFC /* EVObjectDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B371C204190001CDAFC /* EVObjectDescription.swift */; };
+		963D8B3C1C204190001CDAFC /* EVReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B381C204190001CDAFC /* EVReflection.swift */; };
+		963F2FC81C211FB400E96E93 /* File.html in Resources */ = {isa = PBXBuildFile; fileRef = 963F2FC71C211FB400E96E93 /* File.html */; };
 		966B6DDD1C1E6DC600ABAB7F /* MTDealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B6DDC1C1E6DC600ABAB7F /* MTDealsViewController.swift */; };
 		966B6DEC1C1E815200ABAB7F /* MTSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B6DEB1C1E815200ABAB7F /* MTSearchViewController.swift */; };
 		966B6DEE1C1E83E400ABAB7F /* MTRecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B6DED1C1E83E400ABAB7F /* MTRecentViewController.swift */; };
@@ -290,6 +305,27 @@
 		9630F4C11C1D4308000C56BB /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		9630F4C21C1D4308000C56BB /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		9630F4C31C1D4308000C56BB /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		963D8B191C200395001CDAFC /* MTRestrictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRestrictions.swift; sourceTree = "<group>"; };
+		963D8B1B1C20056F001CDAFC /* MTDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTDetailViewController.swift; sourceTree = "<group>"; };
+		963D8B1C1C20056F001CDAFC /* MTDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDetailViewController.xib; sourceTree = "<group>"; };
+		963D8B1F1C201DCE001CDAFC /* MTDealTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTDealTool.swift; sourceTree = "<group>"; };
+		963D8B221C201FC3001CDAFC /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		963D8B231C201FC3001CDAFC /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		963D8B241C201FC3001CDAFC /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		963D8B251C201FC3001CDAFC /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		963D8B261C201FC3001CDAFC /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		963D8B271C201FC3001CDAFC /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		963D8B281C201FC3001CDAFC /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		963D8B291C201FC3001CDAFC /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		963D8B2A1C201FC3001CDAFC /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		963D8B2B1C201FC3001CDAFC /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		963D8B2C1C201FC3001CDAFC /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		963D8B321C203904001CDAFC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		963D8B351C204190001CDAFC /* EVExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVExtensions.swift; sourceTree = "<group>"; };
+		963D8B361C204190001CDAFC /* EVObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVObject.swift; sourceTree = "<group>"; };
+		963D8B371C204190001CDAFC /* EVObjectDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVObjectDescription.swift; sourceTree = "<group>"; };
+		963D8B381C204190001CDAFC /* EVReflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVReflection.swift; sourceTree = "<group>"; };
+		963F2FC71C211FB400E96E93 /* File.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = File.html; sourceTree = "<group>"; };
 		966B6DDC1C1E6DC600ABAB7F /* MTDealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTDealsViewController.swift; sourceTree = "<group>"; };
 		966B6DEB1C1E815200ABAB7F /* MTSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSearchViewController.swift; sourceTree = "<group>"; };
 		966B6DED1C1E83E400ABAB7F /* MTRecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRecentViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +342,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963D8B331C203904001CDAFC /* libsqlite3.tbd in Frameworks */,
 				9630F48D1C1D418D000C56BB /* libssl.a in Frameworks */,
 				9630F4811C1D418D000C56BB /* AlipayRsaLib.a in Frameworks */,
 				9630F4831C1D418D000C56BB /* AlixPaylib_arc.a in Frameworks */,
@@ -339,7 +376,9 @@
 		9612CFB21C195D600045EFCC = {
 			isa = PBXGroup;
 			children = (
+				963D8B321C203904001CDAFC /* libsqlite3.tbd */,
 				9612D03A1C19AE1B0045EFCC /* bridge.h */,
+				963F2FC71C211FB400E96E93 /* File.html */,
 				9612CFBD1C195D600045EFCC /* MTHD */,
 				9612CFBC1C195D600045EFCC /* Products */,
 			);
@@ -384,47 +423,33 @@
 		9612CFE71C19A8CE0045EFCC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9612CFE81C19A8CE0045EFCC /* Discover(发现) */,
-				966B6DDF1C1E811900ABAB7F /* Collect(收藏) */,
 				966B6DE31C1E811900ABAB7F /* Recent(最近) */,
+				966B6DDF1C1E811900ABAB7F /* Collect(收藏) */,
+				9612CFE81C19A8CE0045EFCC /* Detail(详情) */,
 				966B6DE71C1E811900ABAB7F /* Search(搜索) */,
 				9612CFEC1C19A8CE0045EFCC /* Home(首页) */,
 				9612CFF01C19A8CE0045EFCC /* Main(主要) */,
 				9612CFF51C19A8CE0045EFCC /* Message(消息) */,
-				9612CFFD1C19A8CE0045EFCC /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		9612CFE81C19A8CE0045EFCC /* Discover(发现) */ = {
+		9612CFE81C19A8CE0045EFCC /* Detail(详情) */ = {
 			isa = PBXGroup;
 			children = (
 				9612CFE91C19A8CE0045EFCC /* Controller */,
-				9612CFEA1C19A8CE0045EFCC /* Moder */,
-				9612CFEB1C19A8CE0045EFCC /* View */,
 			);
+			name = "Detail(详情)";
 			path = "Discover(发现)";
 			sourceTree = "<group>";
 		};
 		9612CFE91C19A8CE0045EFCC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				963D8B1B1C20056F001CDAFC /* MTDetailViewController.swift */,
+				963D8B1C1C20056F001CDAFC /* MTDetailViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		9612CFEA1C19A8CE0045EFCC /* Moder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Moder;
-			sourceTree = "<group>";
-		};
-		9612CFEB1C19A8CE0045EFCC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		9612CFEC1C19A8CE0045EFCC /* Home(首页) */ = {
@@ -447,8 +472,8 @@
 				9612D04A1C19C9390045EFCC /* MTRegionViewController.xib */,
 				961213AD1C1C0646005573EC /* MTSortViewController.swift */,
 				9612D04D1C19C98A0045EFCC /* MTCityViewController.swift */,
-				96CEA3911C1AFE7600071200 /* MTCitySearchResultViewController.swift */,
 				9612D04E1C19C98A0045EFCC /* MTCityViewController.xib */,
+				96CEA3911C1AFE7600071200 /* MTCitySearchResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -462,6 +487,7 @@
 				9612D00F1C19ABD20045EFCC /* MTCityGroup.swift */,
 				961213A31C1BDBE9005573EC /* MTSort.swift */,
 				9605CB4D1C1D1B89004B059F /* MTDeal.swift */,
+				963D8B191C200395001CDAFC /* MTRestrictions.swift */,
 			);
 			path = Moder;
 			sourceTree = "<group>";
@@ -485,6 +511,7 @@
 		9612CFF01C19A8CE0045EFCC /* Main(主要) */ = {
 			isa = PBXGroup;
 			children = (
+				9612CFFD1C19A8CE0045EFCC /* Tools */,
 				9612CFF11C19A8CE0045EFCC /* Controller */,
 				9612CFF31C19A8CE0045EFCC /* Moder */,
 				9612CFF41C19A8CE0045EFCC /* View */,
@@ -549,13 +576,17 @@
 		9612CFFD1C19A8CE0045EFCC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				963D8B1F1C201DCE001CDAFC /* MTDealTool.swift */,
 			);
-			path = Tools;
+			name = Tools;
+			path = ../Tools;
 			sourceTree = "<group>";
 		};
 		9612CFFE1C19A8CE0045EFCC /* 第三方框架 */ = {
 			isa = PBXGroup;
 			children = (
+				963D8B341C204190001CDAFC /* EVReflection */,
+				963D8B211C201FC3001CDAFC /* fmdb */,
 				9612D0111C19AD7C0045EFCC /* MJExtension */,
 				9630F4971C1D4308000C56BB /* MJRefresh */,
 				9630F48E1C1D4194000C56BB /* MBProgressHUD */,
@@ -824,12 +855,40 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		963D8B211C201FC3001CDAFC /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				963D8B221C201FC3001CDAFC /* FMDatabase.h */,
+				963D8B231C201FC3001CDAFC /* FMDatabase.m */,
+				963D8B241C201FC3001CDAFC /* FMDatabaseAdditions.h */,
+				963D8B251C201FC3001CDAFC /* FMDatabaseAdditions.m */,
+				963D8B261C201FC3001CDAFC /* FMDatabasePool.h */,
+				963D8B271C201FC3001CDAFC /* FMDatabasePool.m */,
+				963D8B281C201FC3001CDAFC /* FMDatabaseQueue.h */,
+				963D8B291C201FC3001CDAFC /* FMDatabaseQueue.m */,
+				963D8B2A1C201FC3001CDAFC /* FMDB.h */,
+				963D8B2B1C201FC3001CDAFC /* FMResultSet.h */,
+				963D8B2C1C201FC3001CDAFC /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		963D8B341C204190001CDAFC /* EVReflection */ = {
+			isa = PBXGroup;
+			children = (
+				963D8B351C204190001CDAFC /* EVExtensions.swift */,
+				963D8B361C204190001CDAFC /* EVObject.swift */,
+				963D8B371C204190001CDAFC /* EVObjectDescription.swift */,
+				963D8B381C204190001CDAFC /* EVReflection.swift */,
+			);
+			name = EVReflection;
+			path = pod;
+			sourceTree = "<group>";
+		};
 		966B6DDF1C1E811900ABAB7F /* Collect(收藏) */ = {
 			isa = PBXGroup;
 			children = (
 				966B6DE01C1E811900ABAB7F /* Controller */,
-				966B6DE11C1E811900ABAB7F /* Moder */,
-				966B6DE21C1E811900ABAB7F /* View */,
 			);
 			path = "Collect(收藏)";
 			sourceTree = "<group>";
@@ -840,20 +899,6 @@
 				966B6DEF1C1E847200ABAB7F /* MTCollectViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		966B6DE11C1E811900ABAB7F /* Moder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Moder;
-			sourceTree = "<group>";
-		};
-		966B6DE21C1E811900ABAB7F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		966B6DE31C1E811900ABAB7F /* Recent(最近) */ = {
@@ -892,8 +937,6 @@
 			isa = PBXGroup;
 			children = (
 				966B6DE81C1E811900ABAB7F /* Controller */,
-				966B6DE91C1E811900ABAB7F /* Moder */,
-				966B6DEA1C1E811900ABAB7F /* View */,
 			);
 			path = "Search(搜索)";
 			sourceTree = "<group>";
@@ -904,20 +947,6 @@
 				966B6DEB1C1E815200ABAB7F /* MTSearchViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		966B6DE91C1E811900ABAB7F /* Moder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Moder;
-			sourceTree = "<group>";
-		};
-		966B6DEA1C1E811900ABAB7F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		96CEA38D1C1AFDD900071200 /* UIView+AutoLayout */ = {
@@ -995,10 +1024,12 @@
 				9630F4821C1D418D000C56BB /* Alixpay.bundle in Resources */,
 				9630F4281C1D30E9000C56BB /* MTDealCell.xib in Resources */,
 				9612D04C1C19C9390045EFCC /* MTRegionViewController.xib in Resources */,
+				963D8B1E1C20056F001CDAFC /* MTDetailViewController.xib in Resources */,
 				9612D0481C19B9B10045EFCC /* MTHomeDropdown.xib in Resources */,
 				9612CFC91C195D600045EFCC /* LaunchScreen.storyboard in Resources */,
 				9612CFC61C195D600045EFCC /* Assets.xcassets in Resources */,
 				9612D0051C19A9A50045EFCC /* categories.plist in Resources */,
+				963F2FC81C211FB400E96E93 /* File.html in Resources */,
 				9612D0401C19B0990045EFCC /* MTHomeTopItem.xib in Resources */,
 				9612D0501C19C98A0045EFCC /* MTCityViewController.xib in Resources */,
 				9612D0061C19A9A50045EFCC /* cities.plist in Resources */,
@@ -1014,6 +1045,7 @@
 			files = (
 				9630F4581C1D4159000C56BB /* UIImage+MultiFormat.m in Sources */,
 				9630F4521C1D4159000C56BB /* SDWebImageDownloader.m in Sources */,
+				963D8B1D1C20056F001CDAFC /* MTDetailViewController.swift in Sources */,
 				9630F4591C1D4159000C56BB /* UIImage+WebP.m in Sources */,
 				961213AE1C1C0646005573EC /* MTSortViewController.swift in Sources */,
 				9612CFD11C196ECF0045EFCC /* MTHomeViewController.swift in Sources */,
@@ -1023,7 +1055,9 @@
 				9630F4961C1D4194000C56BB /* MBProgressHUD.m in Sources */,
 				9630F4271C1D30E9000C56BB /* MTDealCell.swift in Sources */,
 				9630F44E1C1D4159000C56BB /* NSData+ImageContentType.m in Sources */,
+				963D8B3B1C204190001CDAFC /* EVObjectDescription.swift in Sources */,
 				9630F4851C1D418D000C56BB /* AlixPayResult.m in Sources */,
+				963D8B2F1C201FC3001CDAFC /* FMDatabasePool.m in Sources */,
 				9630F42A1C1D3428000C56BB /* MTCenterLineLabel.swift in Sources */,
 				9630F4531C1D4159000C56BB /* SDWebImageDownloaderOperation.m in Sources */,
 				9612D03E1C19B08B0045EFCC /* MTHomeTopItem.swift in Sources */,
@@ -1036,14 +1070,18 @@
 				9612D0461C19B99F0045EFCC /* MTHomeDropdown.swift in Sources */,
 				9630F4CE1C1D4308000C56BB /* MJRefreshBackStateFooter.m in Sources */,
 				9612D00A1C19AA120045EFCC /* MTCategory.swift in Sources */,
+				963D8B3C1C204190001CDAFC /* EVReflection.swift in Sources */,
 				9630F44D1C1D4159000C56BB /* MKAnnotationView+WebCache.m in Sources */,
 				961213A21C1BDB28005573EC /* MTMetaTool.swift in Sources */,
+				963D8B2D1C201FC3001CDAFC /* FMDatabase.m in Sources */,
 				9630F45A1C1D4159000C56BB /* UIImageView+HighlightedWebCache.m in Sources */,
+				963D8B311C201FC3001CDAFC /* FMResultSet.m in Sources */,
 				9630F4D01C1D4308000C56BB /* MJRefreshNormalHeader.m in Sources */,
 				9612CFDA1C197AA60045EFCC /* UIView-Frame+Extension.swift in Sources */,
 				9630F4631C1D4185000C56BB /* AwesomeMenuItem.m in Sources */,
 				9630F4561C1D4159000C56BB /* UIButton+WebCache.m in Sources */,
 				9630F4C51C1D4308000C56BB /* MJRefreshBackFooter.m in Sources */,
+				963D8B2E1C201FC3001CDAFC /* FMDatabaseAdditions.m in Sources */,
 				9612D0441C19B90A0045EFCC /* MTHomeDropdownMainCell.swift in Sources */,
 				9630F45B1C1D4159000C56BB /* UIImageView+WebCache.m in Sources */,
 				9612CFD31C1973660045EFCC /* MTNavigationController.swift in Sources */,
@@ -1056,6 +1094,7 @@
 				9612D0311C19AD7C0045EFCC /* NSObject+MJKeyValue.m in Sources */,
 				9612D0421C19B71D0045EFCC /* MTHomeDropdownSubCell.swift in Sources */,
 				9630F4CA1C1D4308000C56BB /* MJRefreshAutoNormalFooter.m in Sources */,
+				963D8B1A1C200395001CDAFC /* MTRestrictions.swift in Sources */,
 				9612D00E1C19AB8C0045EFCC /* MTRegion.swift in Sources */,
 				9612D02F1C19AD7C0045EFCC /* NSObject+MJClass.m in Sources */,
 				9630F4C71C1D4308000C56BB /* MJRefreshFooter.m in Sources */,
@@ -1073,9 +1112,11 @@
 				9630F4541C1D4159000C56BB /* SDWebImageManager.m in Sources */,
 				9630F4941C1D4194000C56BB /* MBProgressHUD+MJ.m in Sources */,
 				966B6DEE1C1E83E400ABAB7F /* MTRecentViewController.swift in Sources */,
+				963D8B301C201FC3001CDAFC /* FMDatabaseQueue.m in Sources */,
 				9630F4881C1D418D000C56BB /* SBJSON.m in Sources */,
 				9612D00C1C19AB140045EFCC /* MTCity.swift in Sources */,
 				9612D0101C19ABD20045EFCC /* MTCityGroup.swift in Sources */,
+				963D8B201C201DCE001CDAFC /* MTDealTool.swift in Sources */,
 				9612D02E1C19AD7C0045EFCC /* MJPropertyType.m in Sources */,
 				9630F4501C1D4159000C56BB /* SDWebImageCompat.m in Sources */,
 				966B6DDD1C1E6DC600ABAB7F /* MTDealsViewController.swift in Sources */,
@@ -1083,6 +1124,7 @@
 				9612D0321C19AD7C0045EFCC /* NSObject+MJProperty.m in Sources */,
 				9630F4CD1C1D4308000C56BB /* MJRefreshBackNormalFooter.m in Sources */,
 				96CEA3901C1AFDD900071200 /* UIView+AutoLayout.m in Sources */,
+				963D8B3A1C204190001CDAFC /* EVObject.swift in Sources */,
 				96CEA3921C1AFE7600071200 /* MTCitySearchResultViewController.swift in Sources */,
 				9612D0301C19AD7C0045EFCC /* NSObject+MJCoding.m in Sources */,
 				9630F4CF1C1D4308000C56BB /* MJRefreshGifHeader.m in Sources */,
@@ -1092,6 +1134,7 @@
 				9630F4551C1D4159000C56BB /* SDWebImagePrefetcher.m in Sources */,
 				9612D02C1C19AD7C0045EFCC /* MJProperty.m in Sources */,
 				9612D0291C19AD7C0045EFCC /* MJDictionaryCache.m in Sources */,
+				963D8B391C204190001CDAFC /* EVExtensions.swift in Sources */,
 				9630F45C1C1D4159000C56BB /* UIView+WebCacheOperation.m in Sources */,
 				9630F4D51C1D4308000C56BB /* UIScrollView+MJRefresh.m in Sources */,
 				9630F4C41C1D4308000C56BB /* MJRefreshAutoFooter.m in Sources */,

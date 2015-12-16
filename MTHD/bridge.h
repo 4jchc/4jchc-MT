@@ -22,5 +22,5 @@
 #import "AwesomeMenu.h"
 //#import "RegexKitLite.h"
 //
-//#import "FMDB.h"
+#import "FMDB.h"
 

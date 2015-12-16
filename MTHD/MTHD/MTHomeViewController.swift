@@ -340,10 +340,18 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
     //MARK: -  顶部item点击方法
 
     func search(){
+        
 
-        let nav =  MTNavigationController(rootViewController: MTSearchViewController()) 
-        self.presentViewController(nav, animated: true, completion: nil)
-       
+        if ((self.selectedCityName) != nil) {
+            let searchVc: MTSearchViewController = MTSearchViewController()
+            searchVc.cityName = self.selectedCityName;
+            let nav =  MTNavigationController(rootViewController: MTSearchViewController())
+            self.presentViewController(nav, animated: true, completion: nil)
+        } else {
+            MBProgressHUD.showError("请选择城市后再搜索",toView:self.view)
+   
+        }
+          
     }
 
     
