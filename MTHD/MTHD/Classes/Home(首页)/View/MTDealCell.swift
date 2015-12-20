@@ -7,6 +7,11 @@
 //
 
 import UIKit
+protocol MTDealCellDelegate: class {
+    func dealCellCheckingStateDidChange(sender: MTDealCell) -> Void
+}
+
+
 
 class MTDealCell: UICollectionViewCell {
 
@@ -14,6 +19,27 @@ class MTDealCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    weak var delegate: MTDealCellDelegate?
+    /** 蒙版点击 */
+    @IBAction func coverClick(sender: UIButton) {
+        
+        
+        // 设置模型
+        self.deal!.checking = !self.deal!.checking
+        // 直接修改状态
+        self.checkView.hidden = !self.checkView.hidden;
+        if delegate != nil{
+            
+            self.delegate?.dealCellCheckingStateDidChange(self)
+        }
+        
+    }
+    @IBOutlet weak var cover: UIButton!
+    @IBOutlet weak var checkView: UIImageView!
+    
+    
+    
     @IBOutlet var imageView: UIImageView!
     
     @IBOutlet var titleLabel: UILabel!
@@ -72,7 +98,11 @@ class MTDealCell: UICollectionViewCell {
             // 隐藏: 发布日期 < 今天
             self.dealNewView.hidden = (NSString(string: deal!.publish_date).compare(nowStr) == NSComparisonResult.OrderedAscending)
 
+            // 根据模型属性来控制cover的显示和隐藏
+            self.cover.hidden = !deal!.editing;
             
+            // 根据模型属性来控制打钩的显示和隐藏
+            self.checkView.hidden = !deal!.checking
             }
     }
     override func drawRect(rect: CGRect) {

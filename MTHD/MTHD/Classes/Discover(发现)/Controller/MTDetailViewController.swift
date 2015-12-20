@@ -11,6 +11,9 @@ import UIKit
 class MTDetailViewController: UIViewController,UIWebViewDelegate, DPRequestDelegate {
 
         var deal: MTDeal!
+    
+    
+    
     @IBOutlet var loadingView: UIActivityIndicatorView!
     
     @IBOutlet var webView: UIWebView!
@@ -35,10 +38,31 @@ class MTDetailViewController: UIViewController,UIWebViewDelegate, DPRequestDeleg
     @IBAction func back(sender: AnyObject) {
         
       dismissViewControllerAnimated(true, completion: nil)
+        
     }
  
 
     @IBAction func buy(sender: AnyObject) {
+        
+//        // 1.生成订单信息
+//        // 订单信息 == order == [order description]
+//        let order = AlixPayOrder()
+//        order.productName = deal.title
+//        order.productDescription = deal.desc
+//        order.partner = PartnerID
+//        order.seller = SellerID
+//        order.amount = deal.current_price //description
+//        
+//        // 2. 签名加密
+//        let signer = CreateRSADataSigner(PartnerPrivKey)
+//        // 签名信息 == signedString
+//        let signedString = signer.signString(order.description)
+//        
+//        // 3. 利用订单信息，签名信息签名类型生成一个字符串
+//        let orderString = NSString(format: "%@&sign=\"%@\"&sign_type=\"%@\"", order.description, signedString, "RSA")
+//        
+//        // 4.打开客户端,进行支付(商品名称,商品价格,商户信息)
+//        AlixLibService.payOrder(orderString as String, andScheme: "tuangou", seletor: "getResult:", target: self)
         
     }
  
@@ -158,7 +182,7 @@ class MTDetailViewController: UIViewController,UIWebViewDelegate, DPRequestDeleg
     }
     
     func request(request: DPRequest!, didFailWithError error: NSError!) {
-        MBProgressHUD.showError("网络繁忙，请稍后再试", toView: view)
+        MBProgressHUD.showError("网络繁忙，请稍后再试", toView: self.view)
     }
     
 

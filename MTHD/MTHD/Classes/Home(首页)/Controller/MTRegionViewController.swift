@@ -46,6 +46,7 @@ class MTRegionViewController: UIViewController ,MTHomeDropdownDataSource, MTHome
         
         // modal出一个选择地区的控制器
         let city = MTCityViewController()
+       
         let nav = MTNavigationController(rootViewController: city)
         nav.modalPresentationStyle = UIModalPresentationStyle.FormSheet
         let currentcontroller = UIApplication.sharedApplication().keyWindow?.rootViewController

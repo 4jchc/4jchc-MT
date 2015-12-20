@@ -17,7 +17,19 @@
 #import "UIImageView+WebCache.h"
 
 #import "MJRefresh.h"
-//
+
+
+///支付宝
+#include "AlixLibService.h"
+#include "AlixPayOrder.h"
+#include "PartnerConfig.h"
+#include "DataSigner.h"
+#import "AlixPayResult.h"
+//#import "DataVerifier.h"
+#import "PartnerConfig.h"
+
+
+
 
 #import "AwesomeMenu.h"
 //#import "RegexKitLite.h"

@@ -26,7 +26,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
         return true
     }
+    
+    // 当其他应用跳转到本应用时就会调用这个方法 - 处理支付宝客户端返回结果
 
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+
+//        var result:AlixPayResult = AlixPayResult()
+//        if url.description.isEmpty == false && url.host?.compare("safepay") == NSComparisonResult.OrderedAscending{
+//            
+//        let query:NSString = (url.query?.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)! as NSString
+//           
+//             result = AlixPayResult(string: query as String)
+//        }
+//        if (result.statusCode == 9000) {
+//            /*
+//            *用公钥验证签名 严格验证请使用result.resultString与result.signString验签
+//            */
+//            let verifier:DataVerifier = CreateRSADataVerifier(AlipayPubKey);
+//            if verifier.verifyString(result.description, withSign: result.signString){
+//                //验证签名成功，交易结果无篡改
+//                //交易成功
+//                
+//            } else { // 失败
+//                
+//            }
+//        } else {
+//            // 失败
+//            
+//        }
+//        
+        return true
+    }
+    
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

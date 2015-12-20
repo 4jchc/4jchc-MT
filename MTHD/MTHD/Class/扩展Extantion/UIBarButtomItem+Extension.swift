@@ -43,6 +43,21 @@ extension UIBarButtonItem{
         }
         
         return UIBarButtonItem(customView: btn)
-        
     }
+    
+    
+    class func ItemWithTitleTarget(title:String ,target:AnyObject?,action:Selector) ->UIBarButtonItem{
+        
+        let btn:UIButton = UIButton(type: UIButtonType.Custom)
+        btn.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
+        
+        // 设置图片可以改尺寸不会被拉升(2个item的距离)
+        btn.setTitle(title, forState: UIControlState.Normal)
+        btn.setTitleColor(UIColor.RGB(21, 188, 173, 1), forState: UIControlState.Normal)
+        btn.setTitleColor(UIColor.greenColor(), forState: UIControlState.Disabled)
+
+        return UIBarButtonItem(customView: btn)
+    
+    
+}
 }

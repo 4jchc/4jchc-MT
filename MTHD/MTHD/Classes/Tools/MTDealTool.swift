@@ -19,7 +19,7 @@ class MTDealTool: NSObject {
         // 1.打开数据库
         let documentPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last! as NSString
         let path = documentPath.stringByAppendingPathComponent("n.sqlite")
-        print("*****\(path)")
+        print("*path****\(path)")
         // 2.创表
         // 创建FMDatabaseQueue对象会自动打开数据库,如果数据库不存在会创建数据库
         // 后续的所有数据库操作都是通过dbQueue来调用
@@ -40,7 +40,7 @@ class MTDealTool: NSObject {
 
     /// 返回第page页的收藏团购数据:page从1开始
    class func collectDeals(page: Int) -> NSArray {
-        let size: Int = 2
+        let size: Int = 20
         let pos: Int = (page - 1) * size
         
         let sql = "SELECT * FROM t_collect_deal ORDER BY id DESC LIMIT ?, ?"

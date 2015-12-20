@@ -44,8 +44,8 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 增加监听事件
-        setupNotification()
+//        // 增加监听事件
+//        setupNotification()
         
         // 设置导航栏属性
         self.setupLeftNav()
@@ -54,7 +54,17 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
         // 设置左下角菜单awesomemenu
         setupAwesomeMenu()
     }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // 增加监听事件
+        self.setupNotification()
+    }
+    override func viewWillDisappear(animated: Bool) {
+        MTNotificationCenter.removeObserver(self)
+    }
+
     
+
     
     //MARK:设置左下角菜单
     func setupAwesomeMenu() {
@@ -102,6 +112,8 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
     }
 
     func awesomeMenu(menu: AwesomeMenu!, didSelectIndex idx: Int) {
+        // 半透明显示
+        menu.alpha = 0.5;
         // 替换菜单的图片
         menu.contentImage = UIImage(named:"icon_pathMenu_mainMine_normal")
 
@@ -315,7 +327,7 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
         if (self.selectedCategoryName != nil) {
             
             if selectedCategoryName == "全部" {
-                MBProgressHUD.showError("请选择一个分类")
+                MBProgressHUD.showError("请选择一个分类",toView: self.view)
             } else {
                 params["category"] = selectedCategoryName
             }
@@ -354,6 +366,13 @@ class MTHomeViewController: MTDealsViewController,AwesomeMenuDelegate{
           
     }
 
+    
+    func map() {
+        let nav = MTNavigationController(rootViewController: MTMapViewController())
+        presentViewController(nav, animated: true, completion: nil)
+    }
+
+    
     
     func categoryClick(){
       

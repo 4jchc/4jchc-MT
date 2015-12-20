@@ -26,4 +26,6 @@ class MTCategory: NSObject {
     
     /** 显示在地图上的图标 */
     var map_icon : String?
+    
+    
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9605CB4E1C1D1B89004B059F /* MTDeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9605CB4D1C1D1B89004B059F /* MTDeal.swift */; };
+		9609399C1C229B7700AD7D32 /* MTBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609399B1C229B7700AD7D32 /* MTBusiness.swift */; };
 		961213A21C1BDB28005573EC /* MTMetaTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961213A11C1BDB28005573EC /* MTMetaTool.swift */; };
 		961213A41C1BDBE9005573EC /* MTSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961213A31C1BDBE9005573EC /* MTSort.swift */; };
 		961213AB1C1BF720005573EC /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 961213A71C1BF720005573EC /* DPAPI.m */; };
@@ -122,6 +123,10 @@
 		963D8B3A1C204190001CDAFC /* EVObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B361C204190001CDAFC /* EVObject.swift */; };
 		963D8B3B1C204190001CDAFC /* EVObjectDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B371C204190001CDAFC /* EVObjectDescription.swift */; };
 		963D8B3C1C204190001CDAFC /* EVReflection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D8B381C204190001CDAFC /* EVReflection.swift */; };
+		963EC6111C23A573002760B5 /* MTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963EC60F1C23A573002760B5 /* MTMapViewController.swift */; };
+		963EC6121C23A573002760B5 /* MTMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 963EC6101C23A573002760B5 /* MTMapViewController.xib */; };
+		963EC6141C23CB03002760B5 /* MTDealAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963EC6131C23CB03002760B5 /* MTDealAnnotation.swift */; };
+		963EC6161C245BD5002760B5 /* MTHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963EC6151C245BD5002760B5 /* MTHttpTool.swift */; };
 		963F2FC81C211FB400E96E93 /* File.html in Resources */ = {isa = PBXBuildFile; fileRef = 963F2FC71C211FB400E96E93 /* File.html */; };
 		966B6DDD1C1E6DC600ABAB7F /* MTDealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B6DDC1C1E6DC600ABAB7F /* MTDealsViewController.swift */; };
 		966B6DEC1C1E815200ABAB7F /* MTSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966B6DEB1C1E815200ABAB7F /* MTSearchViewController.swift */; };
@@ -134,6 +139,7 @@
 
 /* Begin PBXFileReference section */
 		9605CB4D1C1D1B89004B059F /* MTDeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTDeal.swift; sourceTree = "<group>"; };
+		9609399B1C229B7700AD7D32 /* MTBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBusiness.swift; sourceTree = "<group>"; };
 		961213A11C1BDB28005573EC /* MTMetaTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMetaTool.swift; sourceTree = "<group>"; };
 		961213A31C1BDBE9005573EC /* MTSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSort.swift; sourceTree = "<group>"; };
 		961213A61C1BF720005573EC /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
@@ -325,6 +331,10 @@
 		963D8B361C204190001CDAFC /* EVObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVObject.swift; sourceTree = "<group>"; };
 		963D8B371C204190001CDAFC /* EVObjectDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVObjectDescription.swift; sourceTree = "<group>"; };
 		963D8B381C204190001CDAFC /* EVReflection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVReflection.swift; sourceTree = "<group>"; };
+		963EC60F1C23A573002760B5 /* MTMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapViewController.swift; sourceTree = "<group>"; };
+		963EC6101C23A573002760B5 /* MTMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTMapViewController.xib; sourceTree = "<group>"; };
+		963EC6131C23CB03002760B5 /* MTDealAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTDealAnnotation.swift; sourceTree = "<group>"; };
+		963EC6151C245BD5002760B5 /* MTHttpTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHttpTool.swift; sourceTree = "<group>"; };
 		963F2FC71C211FB400E96E93 /* File.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = File.html; sourceTree = "<group>"; };
 		966B6DDC1C1E6DC600ABAB7F /* MTDealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTDealsViewController.swift; sourceTree = "<group>"; };
 		966B6DEB1C1E815200ABAB7F /* MTSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSearchViewController.swift; sourceTree = "<group>"; };
@@ -423,13 +433,13 @@
 		9612CFE71C19A8CE0045EFCC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9612CFF51C19A8CE0045EFCC /* Map(地图) */,
 				966B6DE31C1E811900ABAB7F /* Recent(最近) */,
 				966B6DDF1C1E811900ABAB7F /* Collect(收藏) */,
 				9612CFE81C19A8CE0045EFCC /* Detail(详情) */,
 				966B6DE71C1E811900ABAB7F /* Search(搜索) */,
 				9612CFEC1C19A8CE0045EFCC /* Home(首页) */,
 				9612CFF01C19A8CE0045EFCC /* Main(主要) */,
-				9612CFF51C19A8CE0045EFCC /* Message(消息) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -488,6 +498,7 @@
 				961213A31C1BDBE9005573EC /* MTSort.swift */,
 				9605CB4D1C1D1B89004B059F /* MTDeal.swift */,
 				963D8B191C200395001CDAFC /* MTRestrictions.swift */,
+				9609399B1C229B7700AD7D32 /* MTBusiness.swift */,
 			);
 			path = Moder;
 			sourceTree = "<group>";
@@ -513,8 +524,6 @@
 			children = (
 				9612CFFD1C19A8CE0045EFCC /* Tools */,
 				9612CFF11C19A8CE0045EFCC /* Controller */,
-				9612CFF31C19A8CE0045EFCC /* Moder */,
-				9612CFF41C19A8CE0045EFCC /* View */,
 			);
 			path = "Main(主要)";
 			sourceTree = "<group>";
@@ -528,55 +537,30 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		9612CFF31C19A8CE0045EFCC /* Moder */ = {
+		9612CFF51C19A8CE0045EFCC /* Map(地图) */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Moder;
-			sourceTree = "<group>";
-		};
-		9612CFF41C19A8CE0045EFCC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9612CFF51C19A8CE0045EFCC /* Message(消息) */ = {
-			isa = PBXGroup;
-			children = (
+				963EC60D1C23A55A002760B5 /* Moder */,
 				9612CFF61C19A8CE0045EFCC /* Controller */,
-				9612CFF71C19A8CE0045EFCC /* Moder */,
-				9612CFF81C19A8CE0045EFCC /* View */,
 			);
+			name = "Map(地图)";
 			path = "Message(消息)";
 			sourceTree = "<group>";
 		};
 		9612CFF61C19A8CE0045EFCC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				963EC60F1C23A573002760B5 /* MTMapViewController.swift */,
+				963EC6101C23A573002760B5 /* MTMapViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		9612CFF71C19A8CE0045EFCC /* Moder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Moder;
-			sourceTree = "<group>";
-		};
-		9612CFF81C19A8CE0045EFCC /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		9612CFFD1C19A8CE0045EFCC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				963D8B1F1C201DCE001CDAFC /* MTDealTool.swift */,
+				963EC6151C245BD5002760B5 /* MTHttpTool.swift */,
 			);
 			name = Tools;
 			path = ../Tools;
@@ -885,6 +869,14 @@
 			path = pod;
 			sourceTree = "<group>";
 		};
+		963EC60D1C23A55A002760B5 /* Moder */ = {
+			isa = PBXGroup;
+			children = (
+				963EC6131C23CB03002760B5 /* MTDealAnnotation.swift */,
+			);
+			path = Moder;
+			sourceTree = "<group>";
+		};
 		966B6DDF1C1E811900ABAB7F /* Collect(收藏) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1030,6 +1022,7 @@
 				9612CFC61C195D600045EFCC /* Assets.xcassets in Resources */,
 				9612D0051C19A9A50045EFCC /* categories.plist in Resources */,
 				963F2FC81C211FB400E96E93 /* File.html in Resources */,
+				963EC6121C23A573002760B5 /* MTMapViewController.xib in Resources */,
 				9612D0401C19B0990045EFCC /* MTHomeTopItem.xib in Resources */,
 				9612D0501C19C98A0045EFCC /* MTCityViewController.xib in Resources */,
 				9612D0061C19A9A50045EFCC /* cities.plist in Resources */,
@@ -1051,6 +1044,7 @@
 				9612CFD11C196ECF0045EFCC /* MTHomeViewController.swift in Sources */,
 				9612D02B1C19AD7C0045EFCC /* MJFoundation.m in Sources */,
 				9630F4621C1D4185000C56BB /* AwesomeMenu.m in Sources */,
+				9609399C1C229B7700AD7D32 /* MTBusiness.swift in Sources */,
 				9630F4C91C1D4308000C56BB /* MJRefreshAutoGifFooter.m in Sources */,
 				9630F4961C1D4194000C56BB /* MBProgressHUD.m in Sources */,
 				9630F4271C1D30E9000C56BB /* MTDealCell.swift in Sources */,
@@ -1068,6 +1062,7 @@
 				9630F4871C1D418D000C56BB /* NSString+SBJSON.m in Sources */,
 				9630F4891C1D418D000C56BB /* SBJsonBase.m in Sources */,
 				9612D0461C19B99F0045EFCC /* MTHomeDropdown.swift in Sources */,
+				963EC6111C23A573002760B5 /* MTMapViewController.swift in Sources */,
 				9630F4CE1C1D4308000C56BB /* MJRefreshBackStateFooter.m in Sources */,
 				9612D00A1C19AA120045EFCC /* MTCategory.swift in Sources */,
 				963D8B3C1C204190001CDAFC /* EVReflection.swift in Sources */,
@@ -1087,6 +1082,7 @@
 				9612CFD31C1973660045EFCC /* MTNavigationController.swift in Sources */,
 				96C7BBD81C1B0F71005EE6D2 /* 常量.swift in Sources */,
 				9612D04F1C19C98A0045EFCC /* MTCityViewController.swift in Sources */,
+				963EC6161C245BD5002760B5 /* MTHttpTool.swift in Sources */,
 				9605CB4E1C1D1B89004B059F /* MTDeal.swift in Sources */,
 				9612D03C1C19AF680045EFCC /* MTCategoryViewController.swift in Sources */,
 				9630F4C81C1D4308000C56BB /* MJRefreshHeader.m in Sources */,
@@ -1111,6 +1107,7 @@
 				9630F4D61C1D4308000C56BB /* UIView+MJExtension.m in Sources */,
 				9630F4541C1D4159000C56BB /* SDWebImageManager.m in Sources */,
 				9630F4941C1D4194000C56BB /* MBProgressHUD+MJ.m in Sources */,
+				963EC6141C23CB03002760B5 /* MTDealAnnotation.swift in Sources */,
 				966B6DEE1C1E83E400ABAB7F /* MTRecentViewController.swift in Sources */,
 				963D8B301C201FC3001CDAFC /* FMDatabaseQueue.m in Sources */,
 				9630F4881C1D418D000C56BB /* SBJSON.m in Sources */,
@@ -1252,14 +1249,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MTHD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MTHD/Classes/第三方框架/alipay",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swift.MTHD;
+				PRODUCT_BUNDLE_IDENTIFIER = swift.newcesh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Debug;
@@ -1270,14 +1269,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MTHD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MTHD/Classes/第三方框架/alipay",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = swift.MTHD;
+				PRODUCT_BUNDLE_IDENTIFIER = swift.newcesh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Release;

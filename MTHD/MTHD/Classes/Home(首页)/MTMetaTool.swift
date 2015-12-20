@@ -34,7 +34,37 @@ class MTMetaTool: NSObject {
     }()
 
     
+    /** 判断deal类型 */
+   static func categoryWithDeal(deal: MTDeal) -> MTCategory? {
 
+        let cs = self.categories
+    
+    if deal.categories.firstObject == nil {
+        return nil
+    }
+        let cname = deal.categories.firstObject
+   
+        for c in cs! {
+           let cc = c as! MTCategory
+            print("cname\(cname) -cc.name \(cc.name)")
+            if cname?.isEqualToString(cc.name!) == true {
+                print("****cc1*\(cc.map_icon)")
+                return cc
+            }
+            print("cname\(cname) -map_icon \(cc.map_icon)cc.subcategories \(cc.subcategories)")
+      
+            print("***是否包含**\(cc.subcategories?.containsObject(cname as! String))")
+            
+            if let a = cc.subcategories  {
+                if a.containsObject(cname!){
+                    print("****cc2*\(cc.map_icon)")
+                    return cc
+                }
+            }
 
+        }
+
+        return nil
+    }
 
 }

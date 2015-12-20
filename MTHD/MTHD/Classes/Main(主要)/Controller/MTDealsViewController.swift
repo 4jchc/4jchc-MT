@@ -227,13 +227,11 @@ class MTDealsViewController: UICollectionViewController,DPRequestDelegate {
 
 
     // MARK: UICollectionViewDelegate
-
-    override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
-        
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let detailVc: MTDetailViewController = MTDetailViewController()
         detailVc.deal = self.deals![indexPath.item] as! MTDeal;
         print("***detailVc.deal**\(detailVc.deal))")
         presentViewController(detailVc, animated: true, completion: nil)
-       
     }
+
 }
