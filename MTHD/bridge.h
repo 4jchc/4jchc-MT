@@ -20,13 +20,13 @@
 
 
 ///支付宝
-#include "AlixLibService.h"
-#include "AlixPayOrder.h"
-#include "PartnerConfig.h"
-#include "DataSigner.h"
-#import "AlixPayResult.h"
+//#include "AlixLibService.h"
+//#include "AlixPayOrder.h"
+//#include "PartnerConfig.h"
+//#include "DataSigner.h"
+//#import "AlixPayResult.h"
 //#import "DataVerifier.h"
-#import "PartnerConfig.h"
+//#import "PartnerConfig.h"
 
 
 
