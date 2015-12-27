@@ -14,7 +14,6 @@
 		961213AE1C1C0646005573EC /* MTSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961213AD1C1C0646005573EC /* MTSortViewController.swift */; };
 		9612CFBF1C195D600045EFCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFBE1C195D600045EFCC /* AppDelegate.swift */; };
 		9612CFC61C195D600045EFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9612CFC51C195D600045EFCC /* Assets.xcassets */; };
-		9612CFC91C195D600045EFCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9612CFC71C195D600045EFCC /* LaunchScreen.storyboard */; };
 		9612CFD11C196ECF0045EFCC /* MTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFD01C196ECE0045EFCC /* MTHomeViewController.swift */; };
 		9612CFD31C1973660045EFCC /* MTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFD21C1973660045EFCC /* MTNavigationController.swift */; };
 		9612CFD61C1977720045EFCC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612CFD51C1977720045EFCC /* UIColor+Extension.swift */; };
@@ -133,7 +132,6 @@
 		9612CFBB1C195D600045EFCC /* MTHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9612CFBE1C195D600045EFCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9612CFC51C195D600045EFCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9612CFC81C195D600045EFCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9612CFCA1C195D600045EFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9612CFD01C196ECE0045EFCC /* MTHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTHomeViewController.swift; path = ../../../MTHomeViewController.swift; sourceTree = "<group>"; };
 		9612CFD21C1973660045EFCC /* MTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTNavigationController.swift; path = ../../../MTNavigationController.swift; sourceTree = "<group>"; };
@@ -304,7 +302,6 @@
 		966B6DED1C1E83E400ABAB7F /* MTRecentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRecentViewController.swift; sourceTree = "<group>"; };
 		966B6DEF1C1E847200ABAB7F /* MTCollectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCollectViewController.swift; sourceTree = "<group>"; };
 		96C7BBD71C1B0F71005EE6D2 /* 常量.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "常量.swift"; sourceTree = "<group>"; };
-		96CEA38C1C1AF6DD00071200 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		96CEA3911C1AFE7600071200 /* MTCitySearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCitySearchResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -357,7 +354,6 @@
 				9612CFFF1C19A9860045EFCC /* Other */,
 				9612CFBE1C195D600045EFCC /* AppDelegate.swift */,
 				9612CFC51C195D600045EFCC /* Assets.xcassets */,
-				9612CFC71C195D600045EFCC /* LaunchScreen.storyboard */,
 				9612CFCA1C195D600045EFCC /* Info.plist */,
 			);
 			path = MTHD;
@@ -931,7 +927,6 @@
 				9612D04C1C19C9390045EFCC /* MTRegionViewController.xib in Resources */,
 				963D8B1E1C20056F001CDAFC /* MTDetailViewController.xib in Resources */,
 				9612D0481C19B9B10045EFCC /* MTHomeDropdown.xib in Resources */,
-				9612CFC91C195D600045EFCC /* LaunchScreen.storyboard in Resources */,
 				9612CFC61C195D600045EFCC /* Assets.xcassets in Resources */,
 				9612D0051C19A9A50045EFCC /* categories.plist in Resources */,
 				963F2FC81C211FB400E96E93 /* File.html in Resources */,
@@ -1052,18 +1047,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		9612CFC71C195D600045EFCC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9612CFC81C195D600045EFCC /* Base */,
-				96CEA38C1C1AF6DD00071200 /* zh-Hans */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9612CFCB1C195D600045EFCC /* Debug */ = {
